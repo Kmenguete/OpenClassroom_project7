@@ -7,6 +7,7 @@ class ListShares:
     @staticmethod
     def purchase_shares(purchase_value, share):
 
+        # Add shares to the list until the total shares value reach 500 euros
         while purchase_value < 500:
 
             share += 1
