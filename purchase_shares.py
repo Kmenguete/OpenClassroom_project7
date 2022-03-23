@@ -1,10 +1,10 @@
 
 
-def purchase_shares(purchase_value, number_of_shares):
+def purchase_shares(purchase_value, share):
 
     while purchase_value < 500:
 
-        number_of_shares += 1
+        share += 1
 
     else:
 
