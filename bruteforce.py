@@ -7,4 +7,4 @@ shares_dataframe1_top = shares_dataframe1.head(5)
 
 shares_dataframe1_report = pp.ProfileReport(shares_dataframe1)
 
-print(shares_dataframe1_report)
+print(shares_dataframe1_report.to_file('dataframe1_report'))
