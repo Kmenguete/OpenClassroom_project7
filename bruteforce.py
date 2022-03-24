@@ -1,4 +1,5 @@
 import pandas as pd
+import pandas_profiling as pp
 
 # Visualization Imports
 import seaborn as sn
@@ -7,6 +8,11 @@ import plotly.express as px
 
 shares_dataframe1 = pd.read_csv('dataset1_Python+P7.csv')
 
+# I am generating a pandas profiling report
+shares_dataframe1_report = pp.ProfileReport(shares_dataframe1)
+
+# I am creating a data visualization in order to know if a correlation exist between the cost of a share
+# and its profitability
 color = sn.color_palette()
 
 figure = px.scatter(shares_dataframe1, x='profit', y='price')
@@ -16,5 +22,10 @@ relationship_cost_profitability = figure.show()
 
 # print(relationship_cost_profitability)
 
+# print(shares_dataframe1_report.to_file('dataframe1_report'))
+
 # results of my dataset analysis: There is not any relationship between cost of shares and their profitability.
 # Finding the list of most profitable shares is a lottery.
+
+absurd_value = shares_dataframe1.loc[shares_dataframe1['price'] == '498.76']
+print(absurd_value)
