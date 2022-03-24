@@ -1,10 +1,20 @@
 import pandas as pd
-import pandas_profiling as pp
+
+# Visualization Imports
+
+import matplotlib.pyplot as plt
+import seaborn as sn
+import plotly.graph_objs as go
+import plotly.offline as py
+import plotly.tools as tls
+import plotly.express as px
+import numpy as np
+from tqdm.autonotebook import get_ipython
 
 shares_dataframe1 = pd.read_csv('dataset1_Python+P7.csv')
 
-shares_dataframe1_top = shares_dataframe1.head(5)
+color = sn.color_palette()
 
-shares_dataframe1_report = pp.ProfileReport(shares_dataframe1)
+get_ipython().run_line_magic('matplotlib', 'inline')
 
-print(shares_dataframe1_report.to_file('dataframe1_report'))
+py.init_notebook_mode(connected=True)
