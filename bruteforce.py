@@ -28,5 +28,5 @@ shares_dataframe1 = pd.read_csv('dataset1_Python+P7.csv')
 # Finding the list of most profitable shares is a lottery.
 
 
-def get_most_profitable_shares_list():
-    pass
+def get_most_profitable_shares_list(shares_list):
+    return shares_list
