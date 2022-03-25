@@ -20,7 +20,7 @@ figure.update_traces(marker_color="rgb(158,11,200)", marker_line_color="rgb(15,1
 figure.update_layout(title_text='Is there a positive correlation between the cost of a share and its profitability?')
 relationship_cost_profitability = figure.show()
 
-# print(relationship_cost_profitability)
+print(relationship_cost_profitability)
 
 # print(shares_dataframe1_report.to_file('dataframe1_report'))
 
@@ -28,5 +28,3 @@ relationship_cost_profitability = figure.show()
 # Finding the list of most profitable shares is a lottery.
 
 # Here I am trying to find the outlier reported by my pandas profiling report and my data visualization
-absurd_value = shares_dataframe1.loc[shares_dataframe1['price'] >= 490]
-print(absurd_value)
