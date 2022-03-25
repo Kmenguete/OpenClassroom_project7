@@ -28,5 +28,5 @@ relationship_cost_profitability = figure.show()
 # Finding the list of most profitable shares is a lottery.
 
 # Here I am trying to find the outlier reported by my pandas profiling report and my data visualization
-absurd_value = shares_dataframe1.loc[shares_dataframe1['price'] == '498.76']
+absurd_value = shares_dataframe1.loc[shares_dataframe1['price'] >= 490]
 print(absurd_value)
