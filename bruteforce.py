@@ -26,5 +26,3 @@ print(relationship_cost_profitability)
 
 # results of my dataset analysis: There is not any relationship between cost of shares and their profitability.
 # Finding the list of most profitable shares is a lottery.
-
-# Here I am trying to find the outlier reported by my pandas profiling report and my data visualization
