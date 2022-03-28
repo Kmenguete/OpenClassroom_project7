@@ -25,6 +25,9 @@ def get_profit_of_share(shares, index):
 
 def get_total_price_of_shares(shares):
     total_price_of_shares = 0
-    for index in shares:
+    for index in range(0, len(shares)):
         total_price_of_shares = total_price_of_shares + shares.at[index, 'price']
     return total_price_of_shares
+
+
+get_total_price_of_shares(bruteforce_shares)
