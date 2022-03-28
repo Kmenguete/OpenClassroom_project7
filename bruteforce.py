@@ -15,9 +15,9 @@ bruteforce_shares = pd.read_csv('bruteforce_shares.csv')
 # print(bruteforce_shares.at[6, 'profit'])
 
 
-def get_price_of_share(share):
-    return share['price']
+def get_price_of_share(shares, index):
+    return shares.at[index, 'price']
 
 
-def get_profit_of_share(share):
-    return share['profit']
+def get_profit_of_share(shares, index):
+    return shares.at[index, 'profit']
