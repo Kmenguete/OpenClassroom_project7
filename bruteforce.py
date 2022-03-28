@@ -29,6 +29,3 @@ def get_total_price_of_shares(shares):
     total_price_of_shares = shares['price'].sum()
     print(total_price_of_shares)
     return total_price_of_shares
-
-
-get_total_price_of_shares(bruteforce_shares)
