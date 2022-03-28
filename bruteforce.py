@@ -29,3 +29,9 @@ def get_total_price_of_shares(shares):
     total_price_of_shares = shares['price'].sum()
     print(total_price_of_shares)
     return total_price_of_shares
+
+
+def get_total_profit_of_shares(shares):
+    total_profit_of_shares = shares['profit'].sum()
+    print(total_profit_of_shares)
+    return total_profit_of_shares
