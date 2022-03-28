@@ -6,4 +6,10 @@ import pandas as pd
 
 bruteforce_shares = pd.read_csv('bruteforce_shares.csv')
 
-print(bruteforce_shares)
+# print(bruteforce_shares.iloc[0])
+
+# print(bruteforce_shares.at[0, 'name'])
+
+# print(bruteforce_shares.at[3, 'price'])
+
+# print(bruteforce_shares.at[6, 'profit'])
