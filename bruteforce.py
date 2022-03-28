@@ -16,17 +16,18 @@ bruteforce_shares = pd.read_csv('bruteforce_shares.csv')
 
 
 def get_price_of_share(shares, index):
+    print(shares.at[index, 'price'])
     return shares.at[index, 'price']
 
 
 def get_profit_of_share(shares, index):
+    print(shares.at[index, 'profit'])
     return shares.at[index, 'profit']
 
 
 def get_total_price_of_shares(shares):
-    total_price_of_shares = 0
-    for index in range(0, len(shares)):
-        total_price_of_shares = total_price_of_shares + shares.at[index, 'price']
+    total_price_of_shares = shares['price'].sum()
+    print(total_price_of_shares)
     return total_price_of_shares
 
 
