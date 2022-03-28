@@ -21,3 +21,10 @@ def get_price_of_share(shares, index):
 
 def get_profit_of_share(shares, index):
     return shares.at[index, 'profit']
+
+
+def get_total_price_of_shares(shares, index):
+    total_price_of_shares = 0
+    for share in shares:
+        total_price_of_shares = total_price_of_shares + share.at[index, 'price']
+    return total_price_of_shares
