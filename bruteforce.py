@@ -6,6 +6,7 @@ import pandas as pd
 
 bruteforce_shares = pd.read_csv('bruteforce_shares.csv')
 
+
 # print(bruteforce_shares.iloc[0])
 
 # print(bruteforce_shares.at[0, 'name'])
@@ -39,7 +40,7 @@ def get_total_profit_of_shares(shares):
 
 def get_real_profit(shares):
     for i in range(len(shares)):
-        real_profit = shares.loc[i, 'price'] * (shares.loc[i, 'profit']/100)
+        real_profit = shares.loc[i, 'price'] * (shares.loc[i, 'profit'] / 100)
         shares['real profit'] = pd.Series([real_profit])
         print("The real profit of share: " + str(shares.loc[i, 'name']) + " is " + str(real_profit))
 
