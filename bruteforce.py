@@ -12,6 +12,7 @@ csv_bruteforce_shares = 'bruteforce_shares.csv'
 
 csv_bruteforce_shares_real_profit = 'bruteforce_shares_real_profit.csv'
 
+
 # print(bruteforce_shares.iloc[0])
 
 # print(bruteforce_shares.at[0, 'name'])
@@ -48,8 +49,8 @@ def get_real_profit(shares, csv_shares, csv_shares_real_profit):
     for i in range(len(shares)):
         real_profit = shares.loc[i, 'price'] * (shares.loc[i, 'profit'] / 100)
         real_profit_list.append(real_profit)
-        add_column_in_csv(csv_shares, csv_shares_real_profit, lambda row, line_num:
-                          row.append(real_profit_list[line_num - 1]))
+    add_column_in_csv(csv_shares, csv_shares_real_profit, lambda row, line_num:
+                      row.append(real_profit_list[line_num - 1]))
 
 
 def add_column_in_csv(input_file, output_file, transform_row):
@@ -69,6 +70,3 @@ def add_column_in_csv(input_file, output_file, transform_row):
             transform_row(row, csv_reader.line_num)
             # Write the updated row / list to the output file
             csv_writer.writerow(row)
-
-
-get_real_profit(bruteforce_shares, csv_bruteforce_shares, csv_bruteforce_shares_real_profit)
