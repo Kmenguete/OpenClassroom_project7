@@ -35,3 +35,7 @@ def get_total_profit_of_shares(shares):
     total_profit_of_shares = shares['profit'].sum()
     print(total_profit_of_shares)
     return total_profit_of_shares
+
+
+def get_real_profit():
+    pass
