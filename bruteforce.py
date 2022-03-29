@@ -37,5 +37,10 @@ def get_total_profit_of_shares(shares):
     return total_profit_of_shares
 
 
-def get_real_profit():
-    pass
+def get_real_profit(shares):
+    for i in range(len(shares)):
+        real_profit = shares.loc[i, 'price'] * (shares.loc[i, 'profit']/100)
+        print("The real profit of share: " + str(shares.loc[i, 'name']) + " is " + str(real_profit))
+
+
+get_real_profit(bruteforce_shares)
