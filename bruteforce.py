@@ -53,8 +53,13 @@ def add_column_in_csv(input_file, output_file, transform_row):
     # Open the input_file in read mode and output_file in write mode
     with open(input_file, 'r') as read_object, \
             open(output_file, 'w', newline='') as write_object:
+        # Create a csv.reader object from the input file object
         csv_reader = reader(read_object)
+        # Create a csv.writer object from the output file object
         csv_writer = writer(write_object)
+        # Read each row of the input csv file as list
         for row in csv_reader:
+            # Pass the list / row in the transform function to add column text for this row
             transform_row(row, csv_reader.line_num)
+            # Write the updated row / list to the output file
             csv_writer.writerow(row)
