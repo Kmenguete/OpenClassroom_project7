@@ -41,7 +41,6 @@ def get_total_profit_of_shares(shares):
 def get_real_profit(shares):
     for i in range(len(shares)):
         real_profit = shares.loc[i, 'price'] * (shares.loc[i, 'profit'] / 100)
-        shares['real profit'] = pd.Series([real_profit])
         print("The real profit of share: " + str(shares.loc[i, 'name']) + " is " + str(real_profit))
 
 
