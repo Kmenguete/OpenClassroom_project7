@@ -8,6 +8,9 @@ from csv import reader
 
 bruteforce_shares = pd.read_csv('bruteforce_shares.csv')
 
+csv_bruteforce_shares = 'bruteforce_shares.csv'
+
+csv_bruteforce_shares_real_profit = 'bruteforce_shares_real_profit.csv'
 
 # print(bruteforce_shares.iloc[0])
 
@@ -40,10 +43,13 @@ def get_total_profit_of_shares(shares):
     return total_profit_of_shares
 
 
-def get_real_profit(shares):
+def get_real_profit(shares, csv_shares, csv_shares_real_profit):
+    real_profit_list = ['real profit', ]
     for i in range(len(shares)):
         real_profit = shares.loc[i, 'price'] * (shares.loc[i, 'profit'] / 100)
-        print("The real profit of share: " + str(shares.loc[i, 'name']) + " is " + str(real_profit))
+        real_profit_list.append(real_profit)
+        add_column_in_csv(csv_shares, csv_shares_real_profit, lambda row, line_num:
+                          row.append(real_profit_list[line_num - 1]))
 
 
 def add_column_in_csv(input_file, output_file, transform_row):
@@ -63,3 +69,6 @@ def add_column_in_csv(input_file, output_file, transform_row):
             transform_row(row, csv_reader.line_num)
             # Write the updated row / list to the output file
             csv_writer.writerow(row)
+
+
+get_real_profit(bruteforce_shares, csv_bruteforce_shares, csv_bruteforce_shares_real_profit)
