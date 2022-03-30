@@ -88,4 +88,7 @@ def get_most_profitable_shares(shares_list, max_cost):
         if total_cost + cost_share <= max_cost:
             most_profitable_shares.append(share)
             total_cost = total_cost + cost_share
+        else:
+            print("The max cost of purchased shares is reached.")
+        i = i + 1
     return most_profitable_shares
