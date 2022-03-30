@@ -29,9 +29,9 @@ def get_price_of_share(shares, index):
     return shares.at[index, 'price']
 
 
-def get_profit_of_share(shares, index):
-    print(shares.at[index, 'profit'])
-    return shares.at[index, 'profit']
+def get_real_profit_of_share(shares, index):
+    print(shares.at[index, 'real profit'])
+    return shares.at[index, 'real profit']
 
 
 def get_total_price_of_shares(shares):
@@ -83,8 +83,8 @@ def get_most_profitable_shares(shares_list, max_cost):
     most_profitable_shares = []
     i = 0
     while i < len(sorted_shares_list) and total_cost < max_cost:
-        share = sorted_shares_list[i]
-        cost_share = get_profit_of_share(sorted_shares_list, i)
+        share = sorted_shares_list.iloc[[i]]
+        cost_share = get_price_of_share(sorted_shares_list, i)
         if total_cost + cost_share <= max_cost:
             most_profitable_shares.append(share)
             total_cost = total_cost + cost_share
@@ -92,3 +92,6 @@ def get_most_profitable_shares(shares_list, max_cost):
             print("The max cost of purchased shares is reached.")
         i = i + 1
     return most_profitable_shares
+
+
+get_most_profitable_shares(bruteforce_shares_real_profit, 500)
