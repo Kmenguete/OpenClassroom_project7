@@ -91,6 +91,7 @@ def get_most_profitable_shares(shares_list, max_cost):
         else:
             print("The max cost of purchased shares is reached.")
         i = i + 1
+    print("Here is the list of most profitable shares: " + str(most_profitable_shares))
     return most_profitable_shares
 
 
