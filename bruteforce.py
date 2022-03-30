@@ -8,6 +8,8 @@ from csv import reader
 
 bruteforce_shares = pd.read_csv('bruteforce_shares.csv')
 
+bruteforce_shares_real_profit = pd.read_csv('bruteforce_shares_real_profit.csv')
+
 csv_bruteforce_shares = 'bruteforce_shares.csv'
 
 csv_bruteforce_shares_real_profit = 'bruteforce_shares_real_profit.csv'
@@ -70,3 +72,6 @@ def add_column_in_csv(input_file, output_file, transform_row):
             transform_row(row, csv_reader.line_num)
             # Write the updated row / list to the output file
             csv_writer.writerow(row)
+
+
+sorted_shares_by_real_profit = bruteforce_shares_real_profit.sort_values('real profit')
