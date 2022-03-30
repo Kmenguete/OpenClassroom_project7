@@ -78,7 +78,7 @@ sorted_shares_by_real_profit = bruteforce_shares_real_profit.sort_values('real p
 
 
 def get_most_profitable_shares(shares_list, max_cost):
-    sorted_shares_list = shares_list.sort_value('real profit')
+    sorted_shares_list = shares_list.sort_values('real profit')
     total_cost = 0
     most_profitable_shares = []
     i = 0
