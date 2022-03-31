@@ -83,4 +83,6 @@ n_integers = [i for i in range(2**n)]
 
 binaries_n = [bin(i)[2:] for i in n_integers]
 
-print(binaries_n)
+combinations = ['0'*(n-len(k)) + k for k in binaries_n]
+
+print(combinations)
