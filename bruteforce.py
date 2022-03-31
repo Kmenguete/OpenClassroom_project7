@@ -101,3 +101,9 @@ def get_valid_combinations():
         else:
             pass
 """
+
+""" 
+Finally I will first, create a global function that return all possible combinations of shares list with a maximum 
+total price of 500 euros. Once I get all possible combinations of shares list, I will call a function that will return
+the most profitable shares list.
+"""
