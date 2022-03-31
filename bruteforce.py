@@ -107,3 +107,11 @@ Finally I will first, create a global function that return all possible combinat
 total price of 500 euros. Once I get all possible combinations of shares list, I will call a function that will return
 the most profitable shares list.
 """
+
+
+def get_most_profitable_shares_list():
+    pass
+
+
+def get_all_possible_combination():
+    pass
