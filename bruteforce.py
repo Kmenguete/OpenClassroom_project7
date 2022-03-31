@@ -76,6 +76,8 @@ def add_column_in_csv(input_file, output_file, transform_row):
 
 sorted_shares_by_real_profit = bruteforce_shares_real_profit.sort_values('real profit')
 
+# Trying to get all possible combinations of shares list
+
 n = len(bruteforce_shares_real_profit)
 n_integers = [i for i in range(2**n)]
 
