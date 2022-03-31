@@ -77,15 +77,15 @@ def add_column_in_csv(input_file, output_file, transform_row):
 sorted_shares_by_real_profit = bruteforce_shares_real_profit.sort_values('real profit')
 
 # Trying to get all possible combinations of shares list
-
+"""
 n = len(bruteforce_shares_real_profit)
 n_integers = [i for i in range(2**n)]
 
 binaries_n = [bin(i)[2:] for i in n_integers]
 
 combinations = ['0'*(n-len(k)) + k for k in binaries_n]
-
-
+"""
+"""
 def get_valid_combinations():
     max_cost = 500
     valid_combinations = []
@@ -100,6 +100,4 @@ def get_valid_combinations():
             valid_combinations.append((combination, real_profit_combination))
         else:
             pass
-
-
-get_valid_combinations()
+"""
