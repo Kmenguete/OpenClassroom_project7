@@ -94,9 +94,12 @@ def get_valid_combinations():
         real_profit_combination = 0
         for i in range(n):
             if combination[i] == '1':
-                cost_combination = cost_combination + bruteforce_shares_real_profit[i]['price']
-                real_profit_combination = real_profit_combination + bruteforce_shares_real_profit[i]['real profit']
+                cost_combination = cost_combination + bruteforce_shares_real_profit.at[i, 'price']
+                real_profit_combination = real_profit_combination + bruteforce_shares_real_profit.at[i, 'real profit']
         if cost_combination <= max_cost:
             valid_combinations.append((combination, real_profit_combination))
         else:
             pass
+
+
+get_valid_combinations()
