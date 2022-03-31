@@ -116,14 +116,19 @@ def get_most_profitable_shares_list():
 def get_all_possible_combination(shares):
     maximum_total_price_shares = 500
     # I will first slice my dataframe in smaller dataframe with maximum total price of 500 euros
+    sample_dataframe = pd.DataFrame(columns=['name', 'price', 'profit', 'real profit'])
     total_price_of_shares = 0
     i = 0
     while total_price_of_shares <= maximum_total_price_shares:
         print(shares.iloc[i])
+        sample_dataframe.append({'name': shares.at[i, 'name'], 'price': shares.at[i, 'price'],
+                                 'profit': shares.at[i, 'profit'], 'real profit': shares.at[i, 'real profit']},
+                                ignore_index=True)
         total_price_of_shares = total_price_of_shares + shares.at[i, 'price']
         i += 1
     else:
         print("You reached the maximum authorized total price cost.")
+    print(sample_dataframe)
 
 
 get_all_possible_combination(bruteforce_shares_real_profit)
