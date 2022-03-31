@@ -120,7 +120,6 @@ def get_all_possible_combination(shares):
     total_price_of_shares = 0
     i = 0
     while total_price_of_shares <= maximum_total_price_shares:
-        print(shares.iloc[i])
         sample_dataframe = sample_dataframe.append({'name': shares.at[i, 'name'], 'price': shares.at[i, 'price'],
                                                     'profit': shares.at[i, 'profit'],
                                                     'real profit': shares.at[i, 'real profit']},
