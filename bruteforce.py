@@ -75,3 +75,10 @@ def add_column_in_csv(input_file, output_file, transform_row):
 
 
 sorted_shares_by_real_profit = bruteforce_shares_real_profit.sort_values('real profit')
+
+n = len(bruteforce_shares_real_profit)
+n_integers = [i for i in range(2**n)]
+
+binaries_n = [bin(i)[2:] for i in n_integers]
+
+print(binaries_n)
