@@ -160,7 +160,7 @@ def get_all_possible_combinations(shares):
             print(shares.loc[index, :])
             total_real_profit = get_total_real_profit_of_shares(shares.loc[index, :])
             print("\n")
-            print("Here is the total profit of the above shares list: ")
+            print("Here is the total real profit of the above shares list: ")
             print("\n")
             print(total_real_profit)
             print("\n")
