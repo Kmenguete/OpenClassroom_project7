@@ -162,5 +162,6 @@ def get_all_possible_combinations(shares):
             print("Here is the total profit of the above shares list: ")
             print('\n')
             print(total_profit)
+            get_most_profitable_shares_list(shares.loc[index, :], total_profit, index)
         total_price_of_shares = total_price_of_shares + shares.at[i, 'price']
         i += 1
