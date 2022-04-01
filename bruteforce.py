@@ -47,6 +47,12 @@ def get_total_profit_of_shares(shares):
     return total_profit_of_shares
 
 
+def get_total_real_profit_of_shares(shares):
+    total_real_profit_of_shares = shares['real profit'].sum()
+    print(total_real_profit_of_shares)
+    return total_real_profit_of_shares
+
+
 def get_real_profit(shares, csv_shares, csv_shares_real_profit):
     real_profit_list = ['real profit', ]
     for i in range(len(shares)):
@@ -142,6 +148,3 @@ def get_all_possible_combinations(shares):
             print('\n')
         total_price_of_shares = total_price_of_shares + shares.at[i, 'price']
         i += 1
-
-
-get_all_possible_combinations(bruteforce_shares_real_profit)
