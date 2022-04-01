@@ -116,14 +116,13 @@ the most profitable shares list.
 """
 
 
-def get_most_profitable_shares_list(dataframe_item, total_profit, index):
-    dataframes_list = [dataframe_item]
+def get_most_profitable_shares_list(dataframe_item, total_profit):
     total_profits = [total_profit]
-    dataframe_profit = get_total_real_profit_of_shares(dataframes_list[index])
+    dataframe_profit = get_total_real_profit_of_shares(dataframe_item)
     if dataframe_profit == max(total_profits):
         print("Here is the most profitable shares list: ")
         print("\n")
-        print(dataframes_list[index])
+        print(dataframe_item)
         print("\n")
         print("total real profit: ")
         print("\n")
@@ -162,6 +161,9 @@ def get_all_possible_combinations(shares):
             print("Here is the total profit of the above shares list: ")
             print('\n')
             print(total_profit)
-            get_most_profitable_shares_list(shares.loc[index, :], total_profit, index)
+            get_most_profitable_shares_list(shares.loc[index, :], total_profit)
         total_price_of_shares = total_price_of_shares + shares.at[i, 'price']
         i += 1
+
+
+get_all_possible_combinations(bruteforce_shares_real_profit)
