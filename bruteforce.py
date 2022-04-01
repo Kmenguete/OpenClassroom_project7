@@ -116,8 +116,8 @@ the most profitable shares list.
 """
 
 
-def get_most_profitable_shares_list():
-    pass
+def get_most_profitable_shares_list(dataframe_item, total_profit):
+    dataframes_list = [dataframe_item + "\n" + "total profit of the above shares is: " + "\n" + total_profit]
 
 
 def get_500_euros_shares_list(shares):
@@ -145,6 +145,10 @@ def get_all_possible_combinations(shares):
     while total_price_of_shares <= maximum_total_price_shares:
         for index in list(combinations(shares.index, i)):
             print(shares.loc[index, :])
+            total_profit = get_total_real_profit_of_shares(shares.loc[index, :])
             print('\n')
+            print("Here is the total profit of the above shares list: ")
+            print('\n')
+            print(total_profit)
         total_price_of_shares = total_price_of_shares + shares.at[i, 'price']
         i += 1
