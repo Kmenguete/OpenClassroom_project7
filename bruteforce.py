@@ -116,8 +116,20 @@ the most profitable shares list.
 """
 
 
-def get_most_profitable_shares_list(dataframe_item, total_profit):
-    dataframes_list = [dataframe_item + "\n" + "total profit of the above shares is: " + "\n" + total_profit]
+def get_most_profitable_shares_list(dataframe_item, total_profit, index):
+    dataframes_list = [dataframe_item]
+    total_profits = [total_profit]
+    dataframe_profit = get_total_real_profit_of_shares(dataframes_list[index])
+    if dataframe_profit == max(total_profits):
+        print("Here is the most profitable shares list: ")
+        print("\n")
+        print(dataframes_list[index])
+        print("\n")
+        print("total real profit: ")
+        print("\n")
+        print(max(total_profits))
+    else:
+        pass
 
 
 def get_500_euros_shares_list(shares):
