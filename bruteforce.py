@@ -132,4 +132,16 @@ def get_500_euros_shares_list(shares):
     print(sample_dataframe)
 
 
-get_500_euros_shares_list(bruteforce_shares_real_profit)
+def get_all_possible_combinations(shares):
+    maximum_total_price_shares = 500
+    i = 0
+    total_price_of_shares = 0
+    while total_price_of_shares <= maximum_total_price_shares:
+        for index in list(combinations(shares.index, i)):
+            print(shares.loc[index, :])
+            print('\n')
+        total_price_of_shares = total_price_of_shares + shares.at[i, 'price']
+        i += 1
+
+
+get_all_possible_combinations(bruteforce_shares_real_profit)
