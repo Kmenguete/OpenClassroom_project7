@@ -119,6 +119,8 @@ the most profitable shares list.
 def get_most_profitable_shares_list(dataframes_list, total_real_profits):
     print("Here is the most profitable shares list: ")
     print("\n")
+    print("Here is the total profit of the above shares list: ")
+    print("\n")
     print(max(total_real_profits))
 
 
