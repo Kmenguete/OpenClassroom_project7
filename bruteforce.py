@@ -116,19 +116,19 @@ the most profitable shares list.
 """
 
 
-def get_most_profitable_shares_list(dataframe_item, total_profit):
-    total_profits = [total_profit]
-    dataframe_profit = get_total_real_profit_of_shares(dataframe_item)
-    if dataframe_profit == max(total_profits):
-        print("Here is the most profitable shares list: ")
-        print("\n")
-        print(dataframe_item)
-        print("\n")
-        print("total real profit: ")
-        print("\n")
-        print(max(total_profits))
-    else:
-        pass
+def get_most_profitable_shares_list(dataframes_list, total_real_profits):
+    for index in range(0, len(dataframes_list)):
+        total_real_profit = get_total_real_profit_of_shares(dataframes_list[index])
+        if total_real_profit == max(total_real_profits):
+            print("Here is the most profitable shares list: ")
+            print("\n")
+            print(dataframes_list[index])
+            print("\n")
+            print("Here is the total real profit of the above shares list: ")
+            print("\n")
+            print(total_real_profit)
+        else:
+            pass
 
 
 def get_500_euros_shares_list(shares):
@@ -153,13 +153,23 @@ def get_all_possible_combinations(shares):
     maximum_total_price_shares = 500
     i = 0
     total_price_of_shares = 0
+    dataframes_list = []
+    total_real_profits = []
     while total_price_of_shares <= maximum_total_price_shares:
         for index in list(combinations(shares.index, i)):
             print(shares.loc[index, :])
             total_profit = get_total_real_profit_of_shares(shares.loc[index, :])
-            get_most_profitable_shares_list(shares.loc[index, :], total_profit)
+            print("\n")
+            print("Here is the total profit of the above shares list: ")
+            print("\n")
+            print(total_profit)
+            print("\n")
+            dataframes_list.append(shares.loc[index, :])
+            total_real_profits.append(total_profit)
+
         total_price_of_shares = total_price_of_shares + shares.at[i, 'price']
         i += 1
+    get_most_profitable_shares_list(dataframes_list, total_real_profits)
 
 
 get_all_possible_combinations(bruteforce_shares_real_profit)
