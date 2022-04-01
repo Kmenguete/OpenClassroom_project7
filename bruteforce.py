@@ -158,14 +158,14 @@ def get_all_possible_combinations(shares):
     while total_price_of_shares <= maximum_total_price_shares:
         for index in list(combinations(shares.index, i)):
             print(shares.loc[index, :])
-            total_profit = get_total_real_profit_of_shares(shares.loc[index, :])
+            total_real_profit = get_total_real_profit_of_shares(shares.loc[index, :])
             print("\n")
             print("Here is the total profit of the above shares list: ")
             print("\n")
-            print(total_profit)
+            print(total_real_profit)
             print("\n")
             dataframes_list.append(shares.loc[index, :])
-            total_real_profits.append(total_profit)
+            total_real_profits.append(total_real_profit)
 
         total_price_of_shares = total_price_of_shares + shares.at[i, 'price']
         i += 1
