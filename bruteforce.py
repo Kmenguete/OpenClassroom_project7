@@ -128,7 +128,7 @@ def get_most_profitable_shares_list(dataframes_dict):
             print("\n")
             print(str(max(dataframes_dict.values())))
         else:
-            print("The following shares is not profitable: ")
+            print("The following shares list is not the most profitable: ")
             print("\n")
             print(dataframes[index])
 
