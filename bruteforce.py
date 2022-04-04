@@ -124,6 +124,8 @@ def get_most_profitable_shares_list(dataframes_dict):
             print("\n")
             print(dataframes[index])
             print("\n")
+            print("Here is the total real profit: ")
+            print("\n")
             print(max(dataframes_dict.values()))
         else:
             pass
