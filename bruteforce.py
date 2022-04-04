@@ -163,7 +163,7 @@ def get_all_possible_combinations(shares):
             print("\n")
             print(total_real_profit)
             print("\n")
-            dataframes_dict[shares.loc[index, :]] = total_real_profit
+            dataframes_dict[str(shares.loc[index, :])] = total_real_profit
 
         total_price_of_shares = total_price_of_shares + shares.at[i, 'price']
         i += 1
