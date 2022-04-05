@@ -166,9 +166,10 @@ def get_all_possible_combinations(shares):
             print("\n")
             print(total_real_profit)
             print("\n")
+            print("Here is the total price of shares list: " + str(total_price_of_shares))
             dataframes_dict[str(shares.loc[index, :])] = total_real_profit
+            total_price_of_shares = get_total_price_of_shares(shares.loc[index, :])
 
-        total_price_of_shares = total_price_of_shares + shares.at[i, 'price']
         i += 1
     get_most_profitable_shares_list(dataframes_dict)
 
