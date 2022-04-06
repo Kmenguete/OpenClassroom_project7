@@ -142,9 +142,7 @@ def get_all_possible_combinations(shares):
             total_price_of_shares = get_total_price_of_shares(shares.loc[index, :])
             print("***********Dataframe********************************")
             print(shares.loc[index, :])
-            print("\n")
             print("Here is the total real profit of the above shares list: " + str(total_real_profit))
-            print("\n")
             print("Here is the total price of shares list: " + str(total_price_of_shares))
             print("***********end of Dataframe**************************")
             if total_price_of_shares <= maximum_total_price_shares:
@@ -154,9 +152,10 @@ def get_all_possible_combinations(shares):
                 print("The following dataframe is too expensive for our program: ")
                 print(shares.loc[index, :])
                 print("Here is the total price of shares list: " + str(total_price_of_shares))
+                print("Here is the total real profit of the above shares list: " + str(total_real_profit))
                 print("***********end**of**too**expensive**Dataframe************************")
                 break
-        get_most_profitable_shares_list(dataframes_dict)
+        # get_most_profitable_shares_list(dataframes_dict)
         i += 1
 
 
