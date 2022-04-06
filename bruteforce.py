@@ -15,6 +15,12 @@ csv_bruteforce_shares = 'bruteforce_shares.csv'
 
 csv_bruteforce_shares_real_profit = 'bruteforce_shares_real_profit.csv'
 
+"""
+The profit of one share is a percentage of its cost.
+The real profit of one share is the absolute value of this percentage. For example a share that cost 25 euros and has a
+profit of 8% has a real profit of 2 euros because 25 * (8/100) = 2.
+"""
+
 
 def get_price_of_share(shares, index):
     print(shares.at[index, 'price'])
