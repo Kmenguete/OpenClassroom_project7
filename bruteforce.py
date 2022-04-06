@@ -158,10 +158,9 @@ def get_500_euros_shares_list(shares):
 
 def get_all_possible_combinations(shares):
     maximum_total_price_shares = 500
-    i = 0
-    total_price_of_shares = 0
     dataframes_dict = {}
-    while total_price_of_shares <= maximum_total_price_shares:
+    i = 0
+    while i <= 20:
         for index in list(combinations(shares.index, i)):
             total_real_profit = get_total_real_profit_of_shares(shares.loc[index, :])
             total_price_of_shares = get_total_price_of_shares(shares.loc[index, :])
@@ -172,10 +171,16 @@ def get_all_possible_combinations(shares):
             print("\n")
             print("Here is the total price of shares list: " + str(total_price_of_shares))
             print("***********end of Dataframe**************************")
-            dataframes_dict[str(shares.loc[index, :])] = total_real_profit
-
+            if total_price_of_shares <= maximum_total_price_shares:
+                dataframes_dict[str(shares.loc[index, :])] = total_real_profit
+            else:
+                print("***********too**expensive**Dataframe********************************")
+                print("The following dataframe is too expensive for our program: ")
+                print(shares.loc[index, :])
+                print("Here is the total price of shares list: " + str(total_price_of_shares))
+                print("***********end**of**too**expensive**Dataframe************************")
+        get_most_profitable_shares_list(dataframes_dict)
         i += 1
-    get_most_profitable_shares_list(dataframes_dict)
-
+    
 
 get_all_possible_combinations(bruteforce_shares_real_profit)
