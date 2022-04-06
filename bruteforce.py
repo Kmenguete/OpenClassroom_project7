@@ -16,15 +16,6 @@ csv_bruteforce_shares = 'bruteforce_shares.csv'
 csv_bruteforce_shares_real_profit = 'bruteforce_shares_real_profit.csv'
 
 
-# print(bruteforce_shares.iloc[0])
-
-# print(bruteforce_shares.at[0, 'name'])
-
-# print(bruteforce_shares.at[3, 'price'])
-
-# print(bruteforce_shares.at[6, 'profit'])
-
-
 def get_price_of_share(shares, index):
     print(shares.at[index, 'price'])
     return shares.at[index, 'price']
@@ -52,6 +43,8 @@ def get_total_real_profit_of_shares(shares):
     print(total_real_profit_of_shares)
     return total_real_profit_of_shares
 
+# The get_real_profit function is used to compute the real profit of each share.
+
 
 def get_real_profit(shares, csv_shares, csv_shares_real_profit):
     real_profit_list = ['real profit', ]
@@ -60,6 +53,9 @@ def get_real_profit(shares, csv_shares, csv_shares_real_profit):
         real_profit_list.append(real_profit)
     add_column_in_csv(csv_shares, csv_shares_real_profit, lambda row, line_num: row.append(real_profit_list[line_num - 1
                                                                                                             ]))
+
+# The add_column_in_csv function is used to add a new column to our csv file, and is called in
+# get_real_profit function.
 
 
 def add_column_in_csv(input_file, output_file, transform_row):
@@ -82,32 +78,6 @@ def add_column_in_csv(input_file, output_file, transform_row):
 
 
 sorted_shares_by_real_profit = bruteforce_shares_real_profit.sort_values('real profit')
-
-# Trying to get all possible combinations of shares list
-"""
-n = len(bruteforce_shares_real_profit)
-n_integers = [i for i in range(2**n)]
-
-binaries_n = [bin(i)[2:] for i in n_integers]
-
-combinations = ['0'*(n-len(k)) + k for k in binaries_n]
-"""
-"""
-def get_valid_combinations():
-    max_cost = 500
-    valid_combinations = []
-    for combination in combinations:
-        cost_combination = 0
-        real_profit_combination = 0
-        for i in range(n):
-            if combination[i] == '1':
-                cost_combination = cost_combination + bruteforce_shares_real_profit.at[i, 'price']
-                real_profit_combination = real_profit_combination + bruteforce_shares_real_profit.at[i, 'real profit']
-        if cost_combination <= max_cost:
-            valid_combinations.append((combination, real_profit_combination))
-        else:
-            pass
-"""
 
 """ 
 Finally I will first, create a global function that return all possible combinations of shares list with a maximum 
