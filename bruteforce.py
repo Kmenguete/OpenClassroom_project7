@@ -175,8 +175,6 @@ def get_all_possible_combinations(shares):
             dataframes_dict[str(shares.loc[index, :])] = total_real_profit
 
         i += 1
-    else:
-        pass
     get_most_profitable_shares_list(dataframes_dict)
 
 
