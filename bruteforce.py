@@ -159,22 +159,31 @@ def get_500_euros_shares_list(shares):
 def get_all_possible_combinations(shares):
     maximum_total_price_shares = 500
     i = 0
-    total_price_of_shares = 0
     dataframes_dict = {}
-    while total_price_of_shares <= maximum_total_price_shares:
-        for index in list(combinations(shares.index, i)):
-            total_real_profit = get_total_real_profit_of_shares(shares.loc[index, :])
-            total_price_of_shares = get_total_price_of_shares(shares.loc[index, :])
-            print("***********Dataframe********************************")
+    for index in list(combinations(shares.index, i)):
+        total_real_profit = get_total_real_profit_of_shares(shares.loc[index, :])
+        total_price_of_shares = get_total_price_of_shares(shares.loc[index, :])
+        if total_price_of_shares <= maximum_total_price_shares:
+            print("The following dataframe respect the maximum authorized total cost of shares(500 euros): ")
+            print("******************************authorized**Dataframe********************************")
             print(shares.loc[index, :])
             print("\n")
             print("Here is the total real profit of the above shares list: " + str(total_real_profit))
             print("\n")
             print("Here is the total price of shares list: " + str(total_price_of_shares))
-            print("***********end of Dataframe**************************")
+            print("****************************end of authorized Dataframe*****************************")
             dataframes_dict[str(shares.loc[index, :])] = total_real_profit
-
+        else:
+            print("The total cost of shares of the following dataframe is to high to be processed by our program: ")
+            print("***************************non**authorized**Dataframe********************************")
+            print(shares.loc[index, :])
+            print("\n")
+            print("Here is the total real profit of the above shares list: " + str(total_real_profit))
+            print("\n")
+            print("Here is the total price of shares list: " + str(total_price_of_shares))
+            print("***********end of non authorized Dataframe********************************************")
         i += 1
+        
     get_most_profitable_shares_list(dataframes_dict)
 
 
