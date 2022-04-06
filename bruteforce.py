@@ -179,6 +179,7 @@ def get_all_possible_combinations(shares):
                 print(shares.loc[index, :])
                 print("Here is the total price of shares list: " + str(total_price_of_shares))
                 print("***********end**of**too**expensive**Dataframe************************")
+                break
         get_most_profitable_shares_list(dataframes_dict)
         i += 1
 
