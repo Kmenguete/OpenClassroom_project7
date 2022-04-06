@@ -153,6 +153,7 @@ def get_all_possible_combinations(shares):
                 print(shares.loc[index, :])
                 print("Here is the total real profit of the best combination shares list: " + str(total_real_profit))
                 print("Here is the total price of the best combination shares list: " + str(total_price_of_shares))
+                print("***********end**of**Best**Combination**Dataframe************************")
                 break
             else:
                 print("***********too**expensive**Dataframe********************************")
