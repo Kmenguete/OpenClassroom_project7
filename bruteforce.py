@@ -159,7 +159,7 @@ def get_500_euros_shares_list(shares):
 def get_all_possible_combinations(shares):
     maximum_total_price_shares = 500
     dataframes_dict = {}
-    i = 0
+    i = 1
     while i <= 20:
         for index in list(combinations(shares.index, i)):
             total_real_profit = get_total_real_profit_of_shares(shares.loc[index, :])
@@ -181,6 +181,6 @@ def get_all_possible_combinations(shares):
                 print("***********end**of**too**expensive**Dataframe************************")
         get_most_profitable_shares_list(dataframes_dict)
         i += 1
-    
+
 
 get_all_possible_combinations(bruteforce_shares_real_profit)
