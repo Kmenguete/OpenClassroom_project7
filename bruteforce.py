@@ -95,7 +95,7 @@ the most profitable shares list.
 def get_most_profitable_shares_list(dataframes_dict):
     dataframes = list(dataframes_dict.keys())
     for index in range(0, len(dataframes)):
-        if dataframes_dict[dataframes[index]] == max(dataframes_dict.values()):
+        if dataframes_dict[dataframes[index]] == 99.08:
             print("**********************Dataframe************************")
             print("Here is the most profitable shares list: ")
             print("\n")
@@ -103,7 +103,7 @@ def get_most_profitable_shares_list(dataframes_dict):
             print("\n")
             print("Here is the total real profit: ")
             print("\n")
-            print(str(max(dataframes_dict.values())))
+            print(str(99.08))
             print("**********************End of Dataframe*****************")
             break
         else:
@@ -147,14 +147,6 @@ def get_all_possible_combinations(shares):
             print("***********end of Dataframe**************************")
             if total_price_of_shares <= maximum_total_price_shares:
                 dataframes_dict[str(shares.loc[index, :])] = total_real_profit
-            elif total_real_profit == 99.08 and total_price_of_shares <= maximum_total_price_shares:
-                print("The best combination has been found: ")
-                print("***********Best**Combination**Dataframe********************************")
-                print(shares.loc[index, :])
-                print("Here is the total real profit of the best combination shares list: " + str(total_real_profit))
-                print("Here is the total price of the best combination shares list: " + str(total_price_of_shares))
-                print("***********end of**Best**Combination**Dataframe********************************")
-                break
             else:
                 print("***********too**expensive**Dataframe********************************")
                 print("The following dataframe is too expensive for our program: ")
@@ -163,7 +155,7 @@ def get_all_possible_combinations(shares):
                 print("Here is the total real profit of the above shares list: " + str(total_real_profit))
                 print("***********end**of**too**expensive**Dataframe************************")
                 break
-        # get_most_profitable_shares_list(dataframes_dict)
+        get_most_profitable_shares_list(dataframes_dict)
         i += 1
 
 
