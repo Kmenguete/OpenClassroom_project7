@@ -95,7 +95,7 @@ the most profitable shares list.
 def get_most_profitable_shares_list(dataframes_dict):
     dataframes = list(dataframes_dict.keys())
     for index in range(0, len(dataframes)):
-        if dataframes_dict[dataframes[index]] == 99.08:
+        if dataframes_dict[dataframes[index]] == max(dataframes_dict.values()):
             print("**********************Dataframe************************")
             print("Here is the most profitable shares list: ")
             print("\n")
@@ -103,7 +103,7 @@ def get_most_profitable_shares_list(dataframes_dict):
             print("\n")
             print("Here is the total real profit: ")
             print("\n")
-            print(str(99.08))
+            print(str(max(dataframes_dict.values())))
             print("**********************End of Dataframe*****************")
             break
         else:
