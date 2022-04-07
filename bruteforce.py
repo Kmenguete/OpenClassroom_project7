@@ -111,6 +111,8 @@ def get_most_profitable_shares_list(dataframes_dict):
             print("The following shares list is not the most profitable: ")
             print("\n")
             print(dataframes[index])
+            print("Here is the total real profit of the above shares list: ")
+            print(str(dataframes_dict[dataframes[index]]))
             print("**********************End of Dataframe*****************")
 
 
