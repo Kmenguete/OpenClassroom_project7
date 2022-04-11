@@ -176,7 +176,7 @@ def get_all_possible_combinations(shares):
         combination = str(bin(i)).replace("0b", "")
         dataframe_combination = pd.DataFrame(columns=['name', 'price', 'profit', 'real profit'])
         for j in range(len(combination)):
-            if combination[j] == 1:
+            if combination[j] == "1":
                 dataframe_combination.append({'name': shares.at[j, 'name'], 'price': shares.at[j, 'price'],
                                               'profit': shares.at[j, 'profit'],
                                               'real profit': shares.at[j, 'real profit']}, ignore_index=True)
@@ -184,6 +184,7 @@ def get_all_possible_combinations(shares):
                 pass
         print("************************Dataframe " + str(i) + "*************************************")
         print(dataframe_combination)
+        print("Here is the binary combination: " + combination)
         combinations.append(dataframe_combination)
     print(combinations)
 
