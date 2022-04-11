@@ -177,9 +177,10 @@ def get_all_possible_combinations(shares):
         dataframe_combination = pd.DataFrame(columns=['name', 'price', 'profit', 'real profit'])
         for j in range(len(combination)):
             if combination[j] == "1":
-                dataframe_combination.append({'name': shares.at[j, 'name'], 'price': shares.at[j, 'price'],
-                                              'profit': shares.at[j, 'profit'],
-                                              'real profit': shares.at[j, 'real profit']}, ignore_index=True)
+                dataframe_combination = dataframe_combination.append(
+                    {'name': shares.at[j, 'name'], 'price': shares.at[j, 'price'],
+                     'profit': shares.at[j, 'profit'],
+                     'real profit': shares.at[j, 'real profit']}, ignore_index=True)
             else:
                 pass
         print("************************Dataframe " + str(i) + "*************************************")
