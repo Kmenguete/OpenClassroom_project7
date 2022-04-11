@@ -124,23 +124,22 @@ def get_most_profitable_shares_list(dataframes_list):
     for i in range(0, len(dataframes_list)-1):
         total_price_of_shares = get_total_price_of_shares(dataframes_list[i])
         total_real_profit = get_total_real_profit_of_shares(dataframes_list[i])
-        profitable.append(total_real_profit)
         while total_price_of_shares <= maximum_total_price_of_shares:
+            profitable.append(total_real_profit)
+            print("************************Dataframe " + str(i) + "*************************************")
+            print(dataframes_list[i])
+            print("Here is total price of shares: " + str(total_price_of_shares))
+            print("Here is the total real profit of shares: " + str(total_real_profit))
+        else:
             if total_real_profit == max(profitable):
                 print("************************Dataframe " + str(i) + "*************************************")
                 print("Here is the most profitable shares list: ")
-                print(dataframes_list[i])
                 print("Here is total price of shares: " + str(total_price_of_shares))
                 print("Here is the total real profit of shares: " + str(total_real_profit))
                 break
             else:
-                print("************************Dataframe " + str(i) + "*************************************")
-                print(dataframes_list[i])
-                print("Here is total price of shares: " + str(total_price_of_shares))
-                print("Here is the total real profit of shares: " + str(total_real_profit))
-        else:
-            print("We will not display shares list with total shares price greater than 500 euros.")
-            break
+                print("An error occurred during the execution of the program.")
+                break
 
 
 def get_500_euros_shares_list(shares):
