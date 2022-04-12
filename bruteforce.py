@@ -122,18 +122,20 @@ def get_most_profitable_shares_list(dataframes_list):
     maximum_total_price_of_shares = 500
     profitable = []
     for i in range(0, len(dataframes_list)-1):
-        total_price_of_shares = get_total_price_of_shares(dataframes_list[i])
-        total_real_profit = get_total_real_profit_of_shares(dataframes_list[i])
+        dataframe = pd.DataFrame.from_dict(dataframes_list[i])
+        total_price_of_shares = get_total_price_of_shares(dataframe)
+        total_real_profit = get_total_real_profit_of_shares(dataframe)
         while total_price_of_shares <= maximum_total_price_of_shares:
             profitable.append(total_real_profit)
             print("************************Dataframe " + str(i) + "*************************************")
-            print(dataframes_list[i])
+            print(dataframe)
             print("Here is total price of shares: " + str(total_price_of_shares))
             print("Here is the total real profit of shares: " + str(total_real_profit))
         else:
             if total_real_profit == max(profitable):
                 print("************************Dataframe " + str(i) + "*************************************")
                 print("Here is the most profitable shares list: ")
+                print(dataframe)
                 print("Here is total price of shares: " + str(total_price_of_shares))
                 print("Here is the total real profit of shares: " + str(total_real_profit))
                 break
@@ -207,10 +209,11 @@ def get_all_possible_combinations(shares):
                      'real profit': shares.at[j, 'real profit']}, ignore_index=True)
             else:
                 pass
+        dataframe_combination_dict = dataframe_combination.to_dict()
         print("************************Dataframe " + str(i) + "*************************************")
         print(dataframe_combination)
         print("Here is the binary combination: " + combination)
-        combinations.append(dataframe_combination)
+        combinations.append(dataframe_combination_dict)
     get_most_profitable_shares_list(combinations)
 
 
