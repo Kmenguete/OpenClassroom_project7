@@ -108,6 +108,7 @@ def get_most_profitable_shares_list(affordable_shares, profitable):
             print(dataframe)
             print("Here is total price of shares: " + str(total_price_of_shares))
             print("Here is the total real profit of shares: " + str(total_real_profit))
+            break
         else:
             print("************************Dataframe " + str(i) + "*************************************")
             print("The following shares list is not the most profitable: ")
@@ -194,7 +195,7 @@ get_all_possible_combinations(bruteforce_shares_real_profit)
 
 def get_all_possible_combinations(shares):
     combinations = []
-    for i in range(2 ** 6):
+    for i in range(2 ** 20):
         combination = str(bin(i)).replace("0b", "")
         dataframe_combination = pd.DataFrame(columns=['name', 'price', 'profit', 'real profit'])
         for j in range(len(combination)):
