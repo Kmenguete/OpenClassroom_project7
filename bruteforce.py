@@ -96,33 +96,31 @@ total price of 500 euros. Once I get all possible combinations of shares list, I
 the most profitable shares list.
 """
 
-"""
-def get_most_profitable_shares_list(dataframes_dict):
-    dataframes = list(dataframes_dict.keys())
-    for index in range(0, len(dataframes)):
-        if dataframes_dict[dataframes[index]] == max(dataframes_dict.values()):
-            print("**********************Dataframe************************")
+
+def get_most_profitable_shares_list(affordable_shares, profitable):
+    for i in range(0, len(affordable_shares)):
+        dataframe = pd.DataFrame.from_dict(affordable_shares[i])
+        total_price_of_shares = get_total_price_of_shares(dataframe)
+        total_real_profit = get_total_real_profit_of_shares(dataframe)
+        if total_real_profit == max(profitable):
+            print("************************Dataframe " + str(i) + "*************************************")
             print("Here is the most profitable shares list: ")
-            print(dataframes[index])
-            print("Here is the total real profit: ")
-            print(str(max(dataframes_dict.values())))
-            print("**********************End of Dataframe*****************")
-            break
+            print(dataframe)
+            print("Here is total price of shares: " + str(total_price_of_shares))
+            print("Here is the total real profit of shares: " + str(total_real_profit))
         else:
-            print("**********************Dataframe************************")
+            print("************************Dataframe " + str(i) + "*************************************")
             print("The following shares list is not the most profitable: ")
-            print(dataframes[index])
-            print("Here is the total real profit of the above shares list: ")
-            print(str(dataframes_dict[dataframes[index]]))
-            print("**********************End of Dataframe*****************")
-"""
+            print(dataframe)
+            print("Here is total price of shares: " + str(total_price_of_shares))
+            print("Here is the total real profit of shares: " + str(total_real_profit))
 
 
-def get_most_profitable_shares_list(dataframes_list):
+def get_500_euros_shares_list(dataframes_list):
     maximum_total_price_of_shares = 500
     profitable = []
     affordable_shares_list = []
-    for i in range(0, len(dataframes_list)-1):
+    for i in range(0, len(dataframes_list) - 1):
         dataframe = pd.DataFrame.from_dict(dataframes_list[i])
         total_price_of_shares = get_total_price_of_shares(dataframe)
         total_real_profit = get_total_real_profit_of_shares(dataframe)
@@ -136,7 +134,10 @@ def get_most_profitable_shares_list(dataframes_list):
             print("Here is the total real profit of shares: " + str(total_real_profit))
             affordable_shares_list.append(dataframes_list[i])
             profitable.append(total_real_profit)
+    get_most_profitable_shares_list(affordable_shares_list, profitable)
 
+
+"""
 
 def get_500_euros_shares_list(shares):
     maximum_total_price_shares = 500
@@ -155,6 +156,7 @@ def get_500_euros_shares_list(shares):
         print("You reached the maximum authorized total price cost.")
     print(sample_dataframe)
 
+"""
 
 """
 
@@ -192,7 +194,7 @@ get_all_possible_combinations(bruteforce_shares_real_profit)
 
 def get_all_possible_combinations(shares):
     combinations = []
-    for i in range(2 ** 20):
+    for i in range(2 ** 6):
         combination = str(bin(i)).replace("0b", "")
         dataframe_combination = pd.DataFrame(columns=['name', 'price', 'profit', 'real profit'])
         for j in range(len(combination)):
@@ -208,7 +210,7 @@ def get_all_possible_combinations(shares):
         print(dataframe_combination)
         print("Here is the binary combination: " + combination)
         combinations.append(dataframe_combination_dict)
-    get_most_profitable_shares_list(combinations)
+    get_500_euros_shares_list(combinations)
 
 
 get_all_possible_combinations(bruteforce_shares_real_profit)
