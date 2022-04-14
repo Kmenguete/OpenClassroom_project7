@@ -119,8 +119,8 @@ def get_most_profitable_shares_list(affordable_shares, profitable):
 
 def get_500_euros_shares_list(dataframes_list):
     maximum_total_price_of_shares = 500
-    profitable = []
     affordable_shares_list = []
+    profitable = []
     for i in range(0, len(dataframes_list) - 1):
         dataframe = pd.DataFrame.from_dict(dataframes_list[i])
         total_price_of_shares = get_total_price_of_shares(dataframe)
