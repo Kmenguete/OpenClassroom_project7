@@ -195,7 +195,7 @@ get_all_possible_combinations(bruteforce_shares_real_profit)
 
 def get_all_possible_combinations(shares):
     combinations = []
-    for i in range(2 ** 6):
+    for i in range(2 ** 20):
         combination = str(bin(i)).replace("0b", "")
         dataframe_combination = pd.DataFrame(columns=['name', 'price', 'profit', 'real profit'])
         for j in range(len(combination)):
