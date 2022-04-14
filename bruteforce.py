@@ -125,16 +125,16 @@ def get_500_euros_shares_list(dataframes_list):
         dataframe = pd.DataFrame.from_dict(dataframes_list[i])
         total_price_of_shares = get_total_price_of_shares(dataframe)
         total_real_profit = get_total_real_profit_of_shares(dataframe)
-        if total_price_of_shares > maximum_total_price_of_shares:
-            print("We reached the maximum authorized total cost of shares.")
-            break
-        else:
+        if total_price_of_shares <= maximum_total_price_of_shares:
             print("************************Dataframe " + str(i) + "*************************************")
             print(dataframe)
             print("Here is total price of shares: " + str(total_price_of_shares))
             print("Here is the total real profit of shares: " + str(total_real_profit))
             affordable_shares_list.append(dataframes_list[i])
             profitable.append(total_real_profit)
+        else:
+            print("We reached the maximum authorized total cost of shares.")
+            break
     get_most_profitable_shares_list(affordable_shares_list, profitable)
 
 
