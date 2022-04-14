@@ -121,7 +121,7 @@ def get_500_euros_shares_list(dataframes_list):
     maximum_total_price_of_shares = 500
     affordable_shares_list = []
     profitable = []
-    for i in range(0, len(dataframes_list) - 1):
+    for i in range(0, len(dataframes_list)):
         dataframe = pd.DataFrame.from_dict(dataframes_list[i])
         total_price_of_shares = get_total_price_of_shares(dataframe)
         total_real_profit = get_total_real_profit_of_shares(dataframe)
@@ -195,7 +195,7 @@ get_all_possible_combinations(bruteforce_shares_real_profit)
 
 def get_all_possible_combinations(shares):
     combinations = []
-    for i in range(2 ** 20):
+    for i in range(2 ** 6):
         combination = str(bin(i)).replace("0b", "")
         dataframe_combination = pd.DataFrame(columns=['name', 'price', 'profit', 'real profit'])
         for j in range(len(combination)):
