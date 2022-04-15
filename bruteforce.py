@@ -211,7 +211,8 @@ def get_all_possible_combinations(shares):
         print(dataframe_combination)
         print("Here is the binary combination: " + combination)
         combinations.append(dataframe_combination_dict)
-    get_500_euros_shares_list(combinations)
+    # get_500_euros_shares_list(combinations)
+    print("Here is the total number of combinations: " + str(len(combinations)))
 
 
 get_all_possible_combinations(bruteforce_shares_real_profit)
