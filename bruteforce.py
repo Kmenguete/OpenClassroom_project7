@@ -135,7 +135,7 @@ def get_500_euros_shares_list(dataframes_list):
         else:
             print("We reached the maximum authorized total cost of shares.")
             break
-    get_most_profitable_shares_list(affordable_shares_list, profitable)
+    # get_most_profitable_shares_list(affordable_shares_list, profitable)
 
 
 """
