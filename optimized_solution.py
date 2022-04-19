@@ -17,16 +17,15 @@ def get_real_profit(shares, csv_shares, csv_shares_real_profit):
 
 
 def add_column_in_csv(input_file, output_file, real_profit_list):
-    with open(input_file, 'r') as csv_input:
-        with open(output_file, 'w') as csv_output:
-            writer = csv.writer(csv_output, lineterminator='\n')
-            reader = csv.reader(csv_input)
-            row = next(reader)
+    with open(input_file, 'r') as csv_input, open(output_file, 'w') as csv_output:
+        writer = csv.writer(csv_output, lineterminator='\n')
+        reader = csv.reader(csv_input)
+        row = next(reader)
+        real_profit_list.append(row)
+        for row in reader:
+            row.append(row[0])
             real_profit_list.append(row)
-            for row in reader:
-                row.append(row[0])
-                real_profit_list.append(row)
-            writer.writerow(real_profit_list)
+        writer.writerow(real_profit_list)
 
 
 get_real_profit(shares_dataframe1, csv_dataset1, csv_dataset1_real_profit)
