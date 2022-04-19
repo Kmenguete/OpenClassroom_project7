@@ -2,7 +2,6 @@ import pandas as pd
 from csv import writer
 from csv import reader
 
-
 shares_dataframe1 = pd.read_csv('dataset1_Python+P7.csv')
 
 csv_dataset1 = 'dataset1_Python+P7.csv'
