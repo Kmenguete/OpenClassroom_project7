@@ -33,7 +33,7 @@ def add_column_in_csv(input_file, output_file, transform_row):
         # Read each row of the input csv file as list
         for row in csv_reader:
             # Pass the list / row in the transform function to add column text for this row
-            transform_row(row, csv_reader.line_num - 2)
+            transform_row(row, csv_reader.line_num)
             # Write the updated row / list to the output file
             csv_writer.writerow(row)
 
