@@ -19,6 +19,3 @@ def add_column_in_csv(input_file, output_file, real_profit_list):
     csv_input = input_file
     csv_input['real profit'] = real_profit_list
     csv_input.to_csv(output_file, index=False)
-
-
-get_real_profit(shares_dataframe1, csv_dataset1_real_profit)
