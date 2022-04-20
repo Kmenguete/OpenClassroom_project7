@@ -21,3 +21,9 @@ def add_column_in_csv(input_file, output_file, real_profit_list):
     csv_input = input_file
     csv_input['real profit'] = real_profit_list
     csv_input.to_csv(output_file, index=False)
+
+
+"""
+I envision to build a recommender system for the optimized solution. I will build an algorithm that will recommend
+the most profitable shares list for a total maximum cost of shares of 500 euros.
+"""
