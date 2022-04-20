@@ -73,15 +73,16 @@ def get_most_profitable_shares(shares):
                                                                              ignore_index=True)
         else:
             print("Looking for a profitable share.............")
-    print("Here are the 10 % most profitable shares of the entire dataset: ")
+    print("Here are the 10% most profitable shares of the dataset: ")
     print(most_profitable_shares_list.to_string())
+    get_500_euros_shares_list(most_profitable_shares_list)
 
 
-"""
 def get_500_euros_shares_list(shares):
     maximum_total_price_shares = 500
     # I will slice my dataframe in a smaller dataframe with maximum total price of 500 euros
     sample_dataframe = pd.DataFrame(columns=['name', 'price', 'profit', 'real profit'])
+    total_real_profit = 0
     total_price_of_shares = 0
     i = 0
     while total_price_of_shares <= maximum_total_price_shares:
@@ -90,10 +91,14 @@ def get_500_euros_shares_list(shares):
                                                     'real profit': shares.at[i, 'real profit']},
                                                    ignore_index=True)
         total_price_of_shares = total_price_of_shares + shares.at[i, 'price']
+        total_real_profit = total_real_profit + shares.at[i, 'real profit']
         i += 1
     else:
         print("You reached the maximum authorized total price cost.")
+    print("Here is the most profitable shares list: ")
     print(sample_dataframe)
-"""
+    print("Here is the total cost of shares: " + str(total_price_of_shares))
+    print("Here is the total real profit: " + str(total_real_profit))
 
-# get_most_profitable_shares(shares_dataframe1_real_profit)
+
+get_most_profitable_shares(shares_dataframe1_real_profit)
