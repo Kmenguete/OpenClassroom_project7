@@ -32,3 +32,5 @@ the most profitable shares list for a total maximum cost of shares of 500 euros.
 I will build a simple recommender system. My program will recommend a list of most profitable shares for a maximum
 total cost of 500 euros.
 """
+
+# print(shares_dataframe1_real_profit.head(10))
