@@ -9,6 +9,16 @@ csv_dataset1_real_profit = 'dataset1_Python+P7_real_profit.csv'
 shares_dataframe1_real_profit = pd.read_csv('dataset1_Python+P7_real_profit.csv')
 
 
+def sort_shares_list_by_real_profit(shares):
+    sorted_shares_by_real_profit = shares.sort_values(by=['real profit'], ascending=False)
+    print("****************Here is the sorted top 10 % most profitable shares in descending order*********************")
+    print(sorted_shares_by_real_profit.to_string())
+    print("****************Here is the sorted top 10 % most profitable shares in descending order*********************")
+    print("Now select the most profitable shares from the sorted 10% most profitable shares list"
+          " until you reached 500 euros of total cost of shares: ")
+    get_500_euros_shares_list(sorted_shares_by_real_profit)
+
+
 def get_real_profit_of_share(shares, index):
     print(shares.at[index, 'real profit'])
     return shares.at[index, 'real profit']
@@ -76,7 +86,7 @@ def get_most_profitable_shares(shares):
     print("**********************************Top 10 % most profitable shares of the dataset***************************")
     print(most_profitable_shares_list.to_string())
     print("**********************************Top 10 % most profitable shares of the dataset***************************")
-    get_500_euros_shares_list(most_profitable_shares_list)
+    sort_shares_list_by_real_profit(most_profitable_shares_list)
 
 
 def get_500_euros_shares_list(shares):
