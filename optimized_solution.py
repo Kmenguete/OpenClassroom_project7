@@ -78,8 +78,8 @@ def get_most_profitable_shares_list(shares):
         print("You reached the maximum authorized total price cost.")
     print("Here is the most profitable shares list: ")
     print(most_profitable_shares_list)
-    print("Here is the total price of shares: " + str(total_price_of_shares))
-    print("Here is the total real profit of shares: " + str(total_real_profit_of_shares))
+    print("Here is the total price of shares: " + str(total_price_of_shares) + " euros")
+    print("Here is the total real profit of shares: " + str(total_real_profit_of_shares) + " euros")
     print("Every shares are among the top 10 most profitable shares. Every shares has a real profit higher or equal"
-          "to the following amount: " + str(minimum_real_profit_amount))
+          "to the following amount: " + str(minimum_real_profit_amount) + " euros")
     return most_profitable_shares_list, total_price_of_shares, total_real_profit_of_shares, minimum_real_profit_amount
