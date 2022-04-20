@@ -72,8 +72,9 @@ def get_most_profitable_shares(shares):
                                                                                   i, 'real profit']},
                                                                              ignore_index=True)
         else:
-            print("The following share is not profitable enough: " + str(shares.loc[[i]]))
-    print("Here are the 10 % most profitable shares of the entire dataset: " + str(most_profitable_shares_list))
+            print("Looking for a profitable share.............")
+    print("Here are the 10 % most profitable shares of the entire dataset: ")
+    print(most_profitable_shares_list)
 
 
 def get_500_euros_shares_list(shares):
