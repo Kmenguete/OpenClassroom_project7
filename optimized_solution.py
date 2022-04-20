@@ -62,14 +62,15 @@ def get_most_profitable_shares(shares):
     # From the dataframe of the dataset I will create a smaller dataframe which contain only the 10% most profitable
     # shares.
     most_profitable_shares_list = pd.DataFrame(columns=['name', 'price', 'profit', 'real profit'])
+    real_profit_of_shares = 0
     i = 0
-    real_profit_of_shares = get_real_profit_of_share(shares, i)
     while real_profit_of_shares >= minimum_real_profit_amount:
         most_profitable_shares_list = most_profitable_shares_list.append({'name': shares.at[i, 'name'],
                                                                           'price': shares.at[i, 'price'],
                                                                           'profit': shares.at[i, 'profit'],
                                                                           'real profit': shares.at[i, 'real profit']},
                                                                          ignore_index=True)
+        real_profit_of_shares = real_profit_of_shares + shares.at[i, 'real profit']
         i += 1
     else:
         print("Every shares that are among the 10 % most profitable shares has been browsed.")
