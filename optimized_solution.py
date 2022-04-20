@@ -45,8 +45,6 @@ I will build a simple recommender system. My program will recommend a list of mo
 total cost of 500 euros.
 """
 
-# print(shares_dataframe1_real_profit.head(10))
-
 """
 My program should pick shares with highest real profit, store it into a list and the total cost of shares should 
 not exceed 500 euros.
