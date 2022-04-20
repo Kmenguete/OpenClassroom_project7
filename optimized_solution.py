@@ -92,3 +92,6 @@ def get_500_euros_shares_list(shares):
     else:
         print("You reached the maximum authorized total price cost.")
     print(sample_dataframe)
+
+
+get_most_profitable_shares(shares_dataframe1_real_profit)
