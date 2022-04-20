@@ -9,16 +9,6 @@ csv_dataset1_real_profit = 'dataset1_Python+P7_real_profit.csv'
 shares_dataframe1_real_profit = pd.read_csv('dataset1_Python+P7_real_profit.csv')
 
 
-def get_price_of_share(shares, index):
-    print(shares.at[index, 'price'])
-    return shares.at[index, 'price']
-
-
-def get_real_profit_of_share(shares, index):
-    print(shares.at[index, 'real profit'])
-    return shares.at[index, 'real profit']
-
-
 def get_total_price_of_shares(shares):
     total_price_of_shares = shares['price'].sum()
     print(total_price_of_shares)
