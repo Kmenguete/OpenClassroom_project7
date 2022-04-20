@@ -51,3 +51,7 @@ total cost of 500 euros.
 My program should pick shares with highest real profit, store it into a list and the total cost of shares should 
 not exceed 500 euros.
 """
+
+
+def get_most_profitable_shares_list(shares):
+    return shares
