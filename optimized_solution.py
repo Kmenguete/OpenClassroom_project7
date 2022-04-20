@@ -66,12 +66,16 @@ def get_most_profitable_shares_list(shares):
     total_price_of_shares = 0
     i = 0
     real_profit_of_shares = get_real_profit_of_share(shares, i)
-    while total_price_of_shares <= maximum_total_price_shares and real_profit_of_shares >= minimum_real_profit_amount:
-        most_profitable_shares_list = most_profitable_shares_list.append({'name': shares.at[i, 'name'],
-                                                                          'price': shares.at[i, 'price'],
-                                                                          'profit': shares.at[i, 'profit'],
-                                                                          'real profit': shares.at[i, 'real profit']},
-                                                                         ignore_index=True)
+    while total_price_of_shares <= maximum_total_price_shares:
+        if real_profit_of_shares >= minimum_real_profit_amount:
+            most_profitable_shares_list = most_profitable_shares_list.append({'name': shares.at[i, 'name'],
+                                                                              'price': shares.at[i, 'price'],
+                                                                              'profit': shares.at[i, 'profit'],
+                                                                              'real profit': shares.at[
+                                                                                  i, 'real profit']},
+                                                                             ignore_index=True)
+        else:
+            print("The following share is not profitable enough to be in the shares list.")
         total_price_of_shares = total_price_of_shares + shares.at[i, 'price']
         i += 1
     else:
