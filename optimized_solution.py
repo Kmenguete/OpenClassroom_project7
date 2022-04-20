@@ -9,6 +9,11 @@ csv_dataset1_real_profit = 'dataset1_Python+P7_real_profit.csv'
 shares_dataframe1_real_profit = pd.read_csv('dataset1_Python+P7_real_profit.csv')
 
 
+def get_real_profit_of_share(shares, index):
+    print(shares.at[index, 'real profit'])
+    return shares.at[index, 'real profit']
+
+
 def get_total_price_of_shares(shares):
     total_price_of_shares = shares['price'].sum()
     print(total_price_of_shares)
@@ -52,4 +57,29 @@ not exceed 500 euros.
 
 
 def get_most_profitable_shares_list(shares):
-    return shares
+    # Computing a minimum real profit in order to get the most profitable shares
+    minimum_real_profit_amount = shares['real profit'].quantile(0.9)
+    maximum_total_price_shares = 500
+    total_real_profit_of_shares = get_total_real_profit_of_shares(shares)
+    # I will first slice my dataframe in smaller dataframe with maximum total price of 500 euros
+    most_profitable_shares_list = pd.DataFrame(columns=['name', 'price', 'profit', 'real profit'])
+    total_price_of_shares = 0
+    i = 0
+    real_profit_of_shares = get_real_profit_of_share(shares, i)
+    while total_price_of_shares <= maximum_total_price_shares and real_profit_of_shares >= minimum_real_profit_amount:
+        most_profitable_shares_list = most_profitable_shares_list.append({'name': shares.at[i, 'name'],
+                                                                          'price': shares.at[i, 'price'],
+                                                                          'profit': shares.at[i, 'profit'],
+                                                                          'real profit': shares.at[i, 'real profit']},
+                                                                         ignore_index=True)
+        total_price_of_shares = total_price_of_shares + shares.at[i, 'price']
+        i += 1
+    else:
+        print("You reached the maximum authorized total price cost.")
+    print("Here is the most profitable shares list: ")
+    print(most_profitable_shares_list)
+    print("Here is the total price of shares: " + str(total_price_of_shares))
+    print("Here is the total real profit of shares: " + str(total_real_profit_of_shares))
+    print("Every shares are among the top 10 most profitable shares. Every shares has a real profit higher or equal"
+          "to the following amount: " + str(minimum_real_profit_amount))
+    return most_profitable_shares_list, total_price_of_shares, total_real_profit_of_shares, minimum_real_profit_amount
