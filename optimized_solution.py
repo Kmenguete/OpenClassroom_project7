@@ -73,6 +73,7 @@ def get_most_profitable_shares(shares):
         i += 1
     else:
         print("Every shares that are among the 10 % most profitable shares has been browsed.")
+    print(most_profitable_shares_list)
 
 
 def get_500_euros_shares_list(shares):
