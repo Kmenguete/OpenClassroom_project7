@@ -77,6 +77,7 @@ def get_most_profitable_shares(shares):
     print(most_profitable_shares_list.to_string())
 
 
+"""
 def get_500_euros_shares_list(shares):
     maximum_total_price_shares = 500
     # I will slice my dataframe in a smaller dataframe with maximum total price of 500 euros
@@ -93,6 +94,6 @@ def get_500_euros_shares_list(shares):
     else:
         print("You reached the maximum authorized total price cost.")
     print(sample_dataframe)
+"""
 
-
-get_most_profitable_shares(shares_dataframe1_real_profit)
+# get_most_profitable_shares(shares_dataframe1_real_profit)
