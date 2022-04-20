@@ -10,12 +10,10 @@ shares_dataframe1_real_profit = pd.read_csv('dataset1_Python+P7_real_profit.csv'
 
 
 def sort_shares_list_by_real_profit(shares):
-    sorted_shares_by_real_profit = shares.sort_values(by=['real profit'], ascending=False)
+    sorted_shares_by_real_profit = shares.sort_values(by=['real profit'], ascending=False, ignore_index=True)
     print("****************Here is the sorted top 10 % most profitable shares in descending order*********************")
     print(sorted_shares_by_real_profit.to_string())
     print("****************Here is the sorted top 10 % most profitable shares in descending order*********************")
-    print("Now select the most profitable shares from the sorted 10% most profitable shares list"
-          " until you reached 500 euros of total cost of shares: ")
     get_500_euros_shares_list(sorted_shares_by_real_profit)
 
 
@@ -90,7 +88,7 @@ def get_most_profitable_shares(shares):
 
 
 def get_500_euros_shares_list(shares):
-    maximum_total_price_shares = 500
+    maximum_total_price_shares = 480
     # I will slice my dataframe in a smaller dataframe with maximum total price of 500 euros
     sample_dataframe = pd.DataFrame(columns=['name', 'price', 'profit', 'real profit'])
     total_real_profit = 0
