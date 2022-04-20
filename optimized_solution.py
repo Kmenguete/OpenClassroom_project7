@@ -59,7 +59,8 @@ not exceed 500 euros.
 def get_most_profitable_shares(shares):
     # Computing a minimum real profit in order to get the 10% most profitable shares of the dataset.
     minimum_real_profit_amount = shares['real profit'].quantile(0.9)
-    # From the dataframe of the dataset I will create a smaller dataframe that respect the requirements of customers.
+    # From the dataframe of the dataset I will create a smaller dataframe which contain only the 10% most profitable
+    # shares.
     most_profitable_shares_list = pd.DataFrame(columns=['name', 'price', 'profit', 'real profit'])
     i = 0
     real_profit_of_shares = get_real_profit_of_share(shares, i)
@@ -76,7 +77,7 @@ def get_most_profitable_shares(shares):
 
 def get_500_euros_shares_list(shares):
     maximum_total_price_shares = 500
-    # I will first slice my dataframe in smaller dataframe with maximum total price of 500 euros
+    # I will slice my dataframe in a smaller dataframe with maximum total price of 500 euros
     sample_dataframe = pd.DataFrame(columns=['name', 'price', 'profit', 'real profit'])
     total_price_of_shares = 0
     i = 0
