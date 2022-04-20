@@ -74,7 +74,7 @@ def get_most_profitable_shares(shares):
         else:
             print("Looking for a profitable share.............")
     print("Here are the 10 % most profitable shares of the entire dataset: ")
-    print(most_profitable_shares_list)
+    print(most_profitable_shares_list.to_string())
 
 
 def get_500_euros_shares_list(shares):
