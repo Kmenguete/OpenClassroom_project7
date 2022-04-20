@@ -6,6 +6,8 @@ csv_dataset1 = 'dataset1_Python+P7.csv'
 
 csv_dataset1_real_profit = 'dataset1_Python+P7_real_profit.csv'
 
+shares_dataframe1_real_profit = pd.read_csv('dataset1_Python+P7_real_profit.csv')
+
 
 def get_real_profit(shares, csv_shares_real_profit):
     real_profit_list = []
