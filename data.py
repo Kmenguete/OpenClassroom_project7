@@ -1,3 +1,5 @@
+
+# Retrieve the data from the 20 shares list for the brute force.
 data = [
     {"name": "action1", "cout": 20, "benefice": 5},
     {"name": "action2", "cout": 30, "benefice": 10},
