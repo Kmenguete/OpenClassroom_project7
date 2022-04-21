@@ -1,8 +1,11 @@
 from data import data
-
+import time
 
 # I retrieve shares data from the shares list.
 # I create a function main that should return the best combination.
+start = time.time()
+
+
 def main():
     # I create an empty list where I will store every combination.
     combinations = []
@@ -32,6 +35,8 @@ def main():
     print("Here is the most profitable shares list: ")
     print(combinations[0])
     print("Here is the total real profit of the following shares list: " + str(combinations[0]["benefice"]) + " euros")
+    end = time.time()
+    print(f"The runtime of the program is {end - start} seconds")
 
 
 if __name__ == '__main__':
