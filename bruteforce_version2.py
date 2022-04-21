@@ -21,8 +21,9 @@ def main():
             element = {"actions": actions, "benefice": benefice}
             combinations.append(element)
     combinations.sort(key=lambda x: x["benefice"], reverse=True)
+    print("Here is the most profitable shares list: ")
     print(combinations[0])
-    print(combinations[0]["benefice"])
+    print("Here is the total real profit of the following shares list: " + str(combinations[0]["benefice"]) + " euros")
 
 
 if __name__ == '__main__':
