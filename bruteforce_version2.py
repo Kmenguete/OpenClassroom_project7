@@ -1,5 +1,7 @@
 from data import data
 import time
+import matplotlib.pyplot as plt
+import numpy as np
 
 # I retrieve shares data from the shares list.
 # I create a function main that should return the best combination.
@@ -37,6 +39,14 @@ def main():
     print("Here is the total real profit of the following shares list: " + str(combinations[0]["benefice"]) + " euros")
     end = time.time()
     print(f"The runtime of the program is {end - start} seconds")
+    x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
+    y = np.array([1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144,
+                  524288])
+    plt.plot(x, y)
+    plt.xlabel('Inputs data')
+    plt.ylabel('Time')
+    plt.title('Exponential Time O(2^n) complexity of the algorithm')
+    plt.show()
 
 
 if __name__ == '__main__':
