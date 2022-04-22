@@ -44,8 +44,8 @@ def main():
                   524288])
     plt.plot(x, y)
     plt.xlabel('Inputs data')
-    plt.ylabel('Time')
-    plt.title('Exponential Time O(2^n) complexity of the algorithm')
+    plt.ylabel('Time units')
+    plt.title('Exponential Time O(2^n) complexity of the brute force algorithm in the big O notation')
     plt.show()
 
 
