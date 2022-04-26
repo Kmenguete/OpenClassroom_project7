@@ -18,9 +18,16 @@ Function get_total_real_profit_of_shares(shares)
     return the total real profit of shares from a shares list
 
 Function get_real_profit(shares, csv_shares_real_profit)
+    real profit[1000] : float real profit number
     for i = 0; i < number of shares; i = i + 1:
         calculate the real profit of shares list and put the result in another csv file.
         shares is the main csv file without real profit data and csv_shares_real_profit is the file that will
         contain the result.
         real profit = price of share x (profit of share/100)
+        I add the real profit to the real profit array.
     add_column_in_csv(shares, csv_shares_real_profit, real_profit_list)
+
+Function def add_column_in_csv(input_file, output_file, real_profit_list)
+    I take the dataframe as input file from which I will add real profit data.
+    The output file is the csv file to which I will store and save real profit data.
+    The real profit list is the array where I store real profit data(retrieved from get_real_profit function).
