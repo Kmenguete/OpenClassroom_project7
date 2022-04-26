@@ -45,3 +45,15 @@ Function get_most_profitable_shares(shares)
             Keep looking for a profitable share
     display most profitable shares list
     sort_shares_list_by_real_profit(most profitable shares list)
+
+Function get_500_euros_shares_list(shares)
+    maximum total price of shares = 480 euros
+    sample data frame = the data frame where I will store the most profitable shares list
+    total real profit = 0
+    total price of share = 0
+    while total price of share is lesser or equal to maximum total price of shares:
+        add shares to the sample dataframe
+    display the most profitable shares list
+    Calculate the logarithmic time complexity of the algorithm with a graph.
+
+get_most_profitable_shares(dataframe with real profit)
