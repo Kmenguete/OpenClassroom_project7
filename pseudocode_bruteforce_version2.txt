@@ -3,3 +3,10 @@ Function main()
 Start
 combinations[2^20] : shares dictionary array
 for i = 0 ; i < len(combinations); i = i + 1
+    binary = combinations[i]
+    actions[undefined number in fact, it depends on the total price of shares] : shares
+    real profit of share = 0
+    cost of share = 0
+    for j = 0; j < len(binary); j = j + 1
+        if binary[j] == "1":
+            add share to the actions list
