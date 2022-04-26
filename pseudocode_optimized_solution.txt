@@ -1,0 +1,9 @@
+optimized solution algorithm
+start
+dataframe = csv file
+dataframe with real profit = another csv file(the algorithm will work with this file)
+the real profit represent the percentage of the cost of each share in absolute value.
+
+Function sort_shares_list_by_real_profit(shares)
+    sort the 10% most profitable shares according their real profit in descending order
+    
