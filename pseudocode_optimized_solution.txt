@@ -1,5 +1,5 @@
 optimized solution algorithm
-start
+Start
 dataframe = csv file
 dataframe with real profit = another csv file(the algorithm will work with this file)
 the real profit represent the percentage of the cost of each share in absolute value.
@@ -54,6 +54,9 @@ Function get_500_euros_shares_list(shares)
     while total price of share is lesser or equal to maximum total price of shares:
         add shares to the sample dataframe
     display the most profitable shares list
+    Calculate the runtime of the algorithm by subtracting the time at the end of the program with the time at the
+    beginning of the program.
     Calculate the logarithmic time complexity of the algorithm with a graph.
 
 get_most_profitable_shares(dataframe with real profit)
+End
