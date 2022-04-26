@@ -75,8 +75,8 @@ def get_most_profitable_shares(shares):
     # shares.
     most_profitable_shares_list = pd.DataFrame(columns=['name', 'price', 'profit', 'real profit'])
     for i in range(0, len(shares)):
-        real_profit_of_shares = get_real_profit_of_share(shares, i)
-        if real_profit_of_shares >= minimum_real_profit_amount:
+        real_profit_of_share = get_real_profit_of_share(shares, i)
+        if real_profit_of_share >= minimum_real_profit_amount:
             most_profitable_shares_list = most_profitable_shares_list.append({'name': shares.at[i, 'name'],
                                                                               'price': shares.at[i, 'price'],
                                                                               'profit': shares.at[i, 'profit'],
