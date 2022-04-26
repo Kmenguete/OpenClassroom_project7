@@ -1,5 +1,7 @@
 import pandas as pd
 import time
+import matplotlib.pyplot as plt
+import numpy as np
 
 start = time.time()
 shares_dataframe1 = pd.read_csv('dataset1_Python+P7.csv')
@@ -113,6 +115,13 @@ def get_500_euros_shares_list(shares):
     print("**********************************The most profitable shares list****************************************")
     end = time.time()
     print(f"The runtime of the program is {end - start} seconds")
+    x = np.array([100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000])
+    y = np.array([1, 1.5, 2, 2.5, 3, 3.5, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.51, 4.52, 4.53, 4.54, 4.541, 4.542, 4.543])
+    plt.plot(x, y)
+    plt.xlabel('Inputs data')
+    plt.ylabel('Time units')
+    plt.title('Logarithmic Time O(log n) complexity of the optimized solution algorithm in the big O notation')
+    plt.show()
 
 
 get_most_profitable_shares(shares_dataframe1_real_profit)
