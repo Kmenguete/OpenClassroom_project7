@@ -11,10 +11,15 @@ for i = 0 ; i < len(combinations); i = i + 1
         if binary[j] == "1":
             add share to the actions list
     for each action in actions:
-        profit of share = profit of share + profit of every shares
-        cost of share = cost of share + cost share of every shares
+        profit of share = profit of share + profit of every share
+        cost of share = cost of share + cost share of every share
     if the total cost of a shares list is less of equal to 500 euros:
         add this shares list to the combinations array.
     Sort every combination according their profit.
     return the first combination of the list(the most profitable shares list)
+    Calculate the runtime of the algorithm by subtracting the time at the end of the program with the time at the
+    beginning of the program.
+    Create a graph that analyze the time complexity of the algorithm.
+
+Call the function.
 End
