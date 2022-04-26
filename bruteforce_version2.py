@@ -5,6 +5,7 @@ import numpy as np
 
 # I retrieve shares data from the shares list.
 # I create a function main that should return the best combination.
+# Defining the beginning of the program using time.time()
 start = time.time()
 
 
@@ -37,8 +38,12 @@ def main():
     print("Here is the most profitable shares list: ")
     print(combinations[0])
     print("Here is the total real profit of the following shares list: " + str(combinations[0]["benefice"]) + " euros")
+    # Defining the end of the program using time.time()
     end = time.time()
+    # Calculating the runtime of the program by subtracting the time(time.time()) at the start of the program with
+    # the time(time.time()) at the end of it.
     print(f"The runtime of the program is {end - start} seconds")
+    # Creating a matplotlib graph that illustrate exponential time complexity of the algorithm.
     x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
     y = np.array([1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144,
                   524288])
@@ -47,6 +52,8 @@ def main():
     plt.ylabel('Time units')
     plt.title('Exponential Time O(2^n) complexity of the brute force algorithm in the big O notation')
     plt.show()
+
+    # Creating a matplotlib graph the number of combinations according the number of shares in a list.
 
     y_combinations = np.array([2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072,
                               262144, 524288, 1048576])
