@@ -40,5 +40,8 @@ Function get_most_profitable_shares(shares)
     for i = 0; i < number of shares; i = i + 1:
         real profit of share = get_real_profit_of_share(shares, i)
         if real profit of share is greater or equal to minimum real profit amount:
-
-
+            add share to the most profitable shares list
+        else:
+            Keep looking for a profitable share
+    display most profitable shares list
+    sort_shares_list_by_real_profit(most profitable shares list)
