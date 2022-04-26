@@ -18,8 +18,9 @@ Function get_total_real_profit_of_shares(shares)
     return the total real profit of shares from a shares list
 
 Function get_real_profit(shares, csv_shares_real_profit)
-    calculate the real profit of shares list and put the result in another csv file.
-    shares is the main csv file without real profit data and csv_shares_real_profit is the file that will
-    contain the result.
-    real profit = price of share x (profit of share/100)
-
+    for i = 0; i < number of shares; i = i + 1:
+        calculate the real profit of shares list and put the result in another csv file.
+        shares is the main csv file without real profit data and csv_shares_real_profit is the file that will
+        contain the result.
+        real profit = price of share x (profit of share/100)
+    add_column_in_csv(shares, csv_shares_real_profit, real_profit_list)
