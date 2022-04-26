@@ -1,5 +1,7 @@
 import pandas as pd
+import time
 
+start = time.time()
 shares_dataframe1 = pd.read_csv('dataset1_Python+P7.csv')
 
 csv_dataset1 = 'dataset1_Python+P7.csv'
@@ -109,6 +111,8 @@ def get_500_euros_shares_list(shares):
     print("Here is the total cost of shares: " + str(total_price_of_shares) + " euros")
     print("Here is the total real profit: " + str(total_real_profit) + " euros")
     print("**********************************The most profitable shares list****************************************")
+    end = time.time()
+    print(f"The runtime of the program is {end - start} seconds")
 
 
 get_most_profitable_shares(shares_dataframe1_real_profit)
