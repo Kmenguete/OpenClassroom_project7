@@ -48,6 +48,14 @@ def main():
     plt.title('Exponential Time O(2^n) complexity of the brute force algorithm in the big O notation')
     plt.show()
 
+    y_combinations = np.array([2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072,
+                              262144, 524288, 1048576])
+    plt.plot(x, y_combinations)
+    plt.xlabel('Shares')
+    plt.ylabel('Number of combinations')
+    plt.title('Number of combinations according the number of shares.')
+    plt.show()
+
 
 if __name__ == '__main__':
     main()

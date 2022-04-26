@@ -20,6 +20,7 @@ for i = 0 ; i < len(combinations); i = i + 1
     Calculate the runtime of the algorithm by subtracting the time at the end of the program with the time at the
     beginning of the program.
     Create a graph that analyze the time complexity of the algorithm.
+    Calculate the number of combinations according the number of shares in a list and illustrate it into a graph.
 
 Call the function.
 End
