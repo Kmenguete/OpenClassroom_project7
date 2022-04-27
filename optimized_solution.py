@@ -18,6 +18,8 @@ csv_dataset1_real_profit = 'dataset1_Python+P7_real_profit.csv'
 
 shares_dataframe1_real_profit = pd.read_csv('dataset1_Python+P7_real_profit.csv')
 
+shares_dataframe2_real_profit = pd.read_csv('dataset2_real_profit.csv')
+
 
 def sort_shares_list_by_real_profit(shares):
     sorted_shares_by_real_profit = shares.sort_values(by=['real profit'], ascending=False, ignore_index=True)
