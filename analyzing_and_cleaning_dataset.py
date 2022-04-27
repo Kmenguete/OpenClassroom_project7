@@ -9,6 +9,10 @@ color = sns.color_palette()
 shares_dataframe1 = pd.read_csv('dataset1_Python+P7.csv')
 shares_dataframe2 = pd.read_csv('dataset2.csv')
 
+# The total number of algorithms required to clean dataset is not comprehensive. As new datasets will be used for
+# optimized solution and bruteforce algorithm, I may add new functions according future operations that may need to
+# be maid on future datasets in order to clean and analyze them.
+
 
 def remove_outliers(shares):
     clean_dataframe = pd.DataFrame(columns=['name', 'price', 'profit'])
