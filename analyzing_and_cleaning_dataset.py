@@ -28,8 +28,7 @@ def remove_outliers(shares):
     print(clean_dataframe.to_string())
 
 
-# remove_outliers(shares_dataframe2)
-
-shares_dataframe2_report = pp.ProfileReport(shares_dataframe2)
-
-# print(shares_dataframe2_report.to_file('dataframe2_report.html'))
+def generate_dataframe_report(shares, output_file):
+    shares_report = pp.ProfileReport(shares)
+    print(shares_report.to_file(output_file=output_file))
+    return shares_report
