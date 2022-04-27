@@ -25,6 +25,7 @@ def remove_outliers(shares):
             print("The price of this share does not make sense: " + str(price_of_share))
     clean_dataframe.to_csv('dataset2.csv', index=False)
     print(clean_dataframe.to_string())
+    return clean_dataframe
 
 
 def generate_dataframe_report(shares, output_file):
