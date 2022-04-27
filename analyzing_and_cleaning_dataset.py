@@ -2,17 +2,12 @@ import pandas as pd
 import pandas_profiling as pp
 import seaborn as sns
 
-# import plotly.express as px
+import plotly.express as px
 
 
 color = sns.color_palette()
+shares_dataframe1 = pd.read_csv('dataset1_Python+P7.csv')
 shares_dataframe2 = pd.read_csv('dataset2.csv')
-
-
-# fig = px.scatter(shares_dataframe2, x='price', y='profit')
-# fig.update_traces(marker_color="rgb(100,0,149)", marker_line_color="rgb(215,193,80)", marker_line_width=1.5)
-# fig.update_layout(title_text='relationship between cost and profitability for dataset2')
-# fig.show()
 
 
 def remove_outliers(shares):
@@ -32,3 +27,11 @@ def generate_dataframe_report(shares, output_file):
     shares_report = pp.ProfileReport(shares)
     print(shares_report.to_file(output_file=output_file))
     return shares_report
+
+
+def visualize_shares(shares):
+    figure = px.scatter(shares, x='price', y='profit')
+    figure.update_traces(marker_color="rgb(100,0,149)", marker_line_color="rgb(215,193,80)", marker_line_width=1.5)
+    figure.update_layout(title_text='relationship between cost and profitability for dataset2')
+    figure.show()
+    return figure
