@@ -33,9 +33,9 @@ def generate_dataframe_report(shares, output_file):
     return shares_report
 
 
-def visualize_shares(shares):
+def visualize_shares(shares, title_text):
     figure = px.scatter(shares, x='price', y='profit')
     figure.update_traces(marker_color="rgb(100,0,149)", marker_line_color="rgb(215,193,80)", marker_line_width=1.5)
-    figure.update_layout(title_text='relationship between cost and profitability for dataset2')
+    figure.update_layout(title_text=title_text)
     figure.show()
     return figure
