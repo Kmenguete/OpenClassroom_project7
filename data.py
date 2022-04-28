@@ -25,6 +25,11 @@ data = [
     {"name": "action20", "cout": 114, "benefice": 18}
 ]
 
-data_size = sys.getsizeof(data)
+
+data_1 = [{"name": "action1", "cout": 20, "benefice": 5}, {"name": "action2", "cout": 30, "benefice": 10},
+          {"name": "action3", "cout": 50, "benefice": 15}, {"name": "action4", "cout": 70, "benefice": 20},
+          {"name": "action5", "cout": 60, "benefice": 17}, {"name": "action6", "cout": 80, "benefice": 25}]
+
+data_size = sys.getsizeof(data_1)
 
 print("Here is the size of data list object in memory: " + str(data_size) + " bytes")
