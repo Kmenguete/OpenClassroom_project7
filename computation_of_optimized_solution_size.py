@@ -21,3 +21,15 @@ shares_dataframe2_real_profit = pd.read_csv('dataset2_real_profit.csv')
 shares_dataframe1_size = sys.getsizeof(shares_dataframe1)
 
 shares_dataframe2_size = sys.getsizeof(shares_dataframe2)
+
+csv_dataset1_size = sys.getsizeof(csv_dataset1)
+
+csv_dataset2_size = sys.getsizeof(csv_dataset2)
+
+csv_dataset2_real_profit_size = sys.getsizeof(csv_dataset2_real_profit)
+
+csv_dataset1_real_profit_size = sys.getsizeof(csv_dataset1_real_profit)
+
+shares_dataframe1_real_profit_size = sys.getsizeof(shares_dataframe1_real_profit)
+
+shares_dataframe2_real_profit_size = sys.getsizeof(shares_dataframe2_real_profit)
