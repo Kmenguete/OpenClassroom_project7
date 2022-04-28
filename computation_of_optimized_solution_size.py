@@ -34,10 +34,22 @@ shares_dataframe1_real_profit_size = sys.getsizeof(shares_dataframe1_real_profit
 
 shares_dataframe2_real_profit_size = sys.getsizeof(shares_dataframe2_real_profit)
 
-print("Here is the size of shares_dataframe1 in memory: " + str(shares_dataframe1_size) + " bytes")
+print("Here is the size of shares_dataframe1 variable in memory: " + str(shares_dataframe1_size) + " bytes")
 
-print("Here is the size of shares_dataframe2 in memory: " + str(shares_dataframe2_size) + " bytes")
+print("Here is the size of shares_dataframe2 variable in memory: " + str(shares_dataframe2_size) + " bytes")
 
-print("Here is the size of csv_dataset1 in memory: " + str(csv_dataset1_size) + " bytes")
+print("Here is the size of csv_dataset1 variable in memory: " + str(csv_dataset1_size) + " bytes")
 
-print("Here is the size of csv_dataset2 in memory: " + str(csv_dataset2_size) + " bytes")
+print("Here is the size of csv_dataset2 variable in memory: " + str(csv_dataset2_size) + " bytes")
+
+print("Here is the size of shares_dataframe1_real_profit in memory: " + str(shares_dataframe1_real_profit_size) +
+      " bytes")
+
+print("Here is the size of shares_dataframe2_real_profit in memory: " + str(shares_dataframe2_real_profit_size) +
+      " bytes")
+
+print("Here is the size of csv_dataset1_real_profit variable in memory: " + str(csv_dataset1_real_profit_size) +
+      " bytes")
+
+print("Here is the size of csv_dataset2_real_profit variable in memory: " + str(csv_dataset2_real_profit_size) +
+      " bytes")
