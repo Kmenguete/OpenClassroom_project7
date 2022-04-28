@@ -66,15 +66,14 @@ def main():
 
 
 def get_space_complexity_of_algorithm():
-    # The size of the list of combinations is 6675480 bytes for 20 combinations
-    # The total size of algorithm without any shares share is about 6676418 bytes
+    # The total size of algorithm without any shares share is about 746 bytes
     x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
-    y = np.array([152, 160, 200, 272, 432, 736, 1352, 2328, 4392, 9155, 16696,
-                  34072, 69152, 140744, 285552, 514744, 1043522, 1881000, 3389760, 6872200])
+    y = np.array([898, 906, 946, 1018, 1178, 1482, 2098, 3074, 5138, 9901, 17442,
+                  34818, 69898, 141490, 286298, 515490, 1044268, 1881746, 3390506, 6872946])
     plt.plot(x, y)
     plt.xlabel('Inputs data')
     plt.ylabel('Bytes')
-    plt.title('Linear space complexity O(n) of brute force algorithm')
+    plt.title('Space complexity of brute force algorithm')
     plt.show()
 
 
