@@ -145,7 +145,7 @@ def get_space_complexity_of_algorithm():
     plt.plot(x, y)
     plt.xlabel('Inputs data')
     plt.ylabel('Bytes')
-    plt.title('Space complexity of optimal solution algorithm')
+    plt.title('Linear space complexity O(n) of optimal solution algorithm')
     plt.show()
 
 
