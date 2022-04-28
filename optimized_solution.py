@@ -132,4 +132,15 @@ def get_500_euros_shares_list(shares):
     plt.show()
 
 
+def get_space_complexity_of_algorithm():
+    # The total number of bytes for the optimized solution is 342633 without any shares
+    x = np.array([100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000])
+    y = np.array([517249])
+    plt.plot(x, y)
+    plt.xlabel('Inputs data')
+    plt.ylabel('Bytes')
+    plt.title('Linear space complexity O(n) of brute force algorithm')
+    plt.show()
+
+
 get_most_profitable_shares(shares_dataframe1_real_profit)

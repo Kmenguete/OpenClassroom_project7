@@ -53,3 +53,16 @@ print("Here is the size of csv_dataset1_real_profit variable in memory: " + str(
 
 print("Here is the size of csv_dataset2_real_profit variable in memory: " + str(csv_dataset2_real_profit_size) +
       " bytes")
+
+one_share_in_dataframe = shares_dataframe1.iloc[0]
+
+one_share_in_dataframe_real_profit = shares_dataframe1_real_profit.iloc[0]
+
+size_one_share_in_dataframe = sys.getsizeof(one_share_in_dataframe)
+
+size_one_share_in_dataframe_real_profit = sys.getsizeof(one_share_in_dataframe_real_profit)
+
+print("Here is the size of one share in dataframe: " + str(size_one_share_in_dataframe) + " bytes")
+
+print("Here is the size of one share in dataframe with real profit data: " +
+      str(size_one_share_in_dataframe_real_profit) + " bytes")
