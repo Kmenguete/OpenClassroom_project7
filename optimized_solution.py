@@ -130,16 +130,22 @@ def get_500_euros_shares_list(shares):
     plt.ylabel('Time units')
     plt.title('Logarithmic Time O(log n) complexity of the optimized solution algorithm in the big O notation')
     plt.show()
+    get_space_complexity_of_algorithm()
 
 
 def get_space_complexity_of_algorithm():
-    # The total number of bytes for the optimized solution is 342633 without any shares
+    # The total number of bytes for the optimized solution is 342633 without any shares.
+    # One share takes 629 bytes of memory in dataframe.
+    # The following data about space in memory does not take into account the size of csv file, the whole dataframe
+    # and the whole dataframe with real profit data (because size of these objects may vary a lot according
+    # the number of inputs data).
     x = np.array([100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000])
-    y = np.array([517249])
+    y = np.array([62900, 94350, 125800, 157250, 188700, 220150, 251600, 283450, 314500, 345950, 377400, 408850, 440300,
+                  471750, 503200, 534650, 566100, 597550, 629000])
     plt.plot(x, y)
     plt.xlabel('Inputs data')
     plt.ylabel('Bytes')
-    plt.title('Linear space complexity O(n) of brute force algorithm')
+    plt.title('Space complexity of optimal solution algorithm')
     plt.show()
 
 
