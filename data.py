@@ -1,4 +1,3 @@
-import sys
 
 
 # Retrieve the data from the 20 shares list for the brute force.
@@ -24,7 +23,3 @@ data = [
     {"name": "action19", "cout": 24, "benefice": 21},
     {"name": "action20", "cout": 114, "benefice": 18}
 ]
-
-data_size = sys.getsizeof(data)
-
-print("Here is the size of data list object in memory: " + str(data_size) + " bytes")
