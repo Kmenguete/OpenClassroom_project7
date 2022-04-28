@@ -66,11 +66,11 @@ def main():
 
 
 def get_space_complexity_of_algorithm():
-    # The size of the list of combinations is 6675480 bytes
+    # The size of the list of combinations is 6675480 bytes for 20 combinations
     # The total size of algorithm without any shares share is about 6676418 bytes
     x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
-    y = np.array([6676482, 6676490, 6676498, 6676506, 6676514, 6676522, 6676530, 6676538, 6676546, 6676554, 6676562,
-                  6676570, 6676578, 6676586, 6676594, 6676602, 6676610, 6676618, 6676626, 6676634])
+    y = np.array([152, 160, 200, 272, 432, 736, 1352, 2328, 4392, 9155, 16696,
+                  34072, 69152, 140744, 285552, 514744, 1043522, 1881000, 3389760, 6872200])
     plt.plot(x, y)
     plt.xlabel('Inputs data')
     plt.ylabel('Bytes')
