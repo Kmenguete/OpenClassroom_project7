@@ -73,7 +73,7 @@ def get_space_complexity_of_algorithm():
     plt.plot(x, y)
     plt.xlabel('Inputs data')
     plt.ylabel('Bytes')
-    plt.title('Space complexity of brute force algorithm')
+    plt.title('Exponential space O(2^n) complexity of the brute force algorithm in the big O notation')
     plt.show()
 
 
