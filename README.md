@@ -123,4 +123,10 @@ for each addition of data in the input data, we can say that the space complexit
 exponential(as the time complexity).
 
 The optimized solution has a linear space complexity. That mean that the space used by the algorithm in memory increases
-gradually as the number of input data increases. But it does not increase as fast as the bruteforce algorithm.
+gradually as the number of input data increases. But it does not increase as fast as the bruteforce algorithm. 
+Consequently, the optimized solution has a better space complexity thant the bruteforce because it takes fewer spaces
+in memory.
+
+To conclude, the optimized solution is faster and consumes less memory than the bruteforce(even for a much larger 
+dataset than that of bruteforce). This allows us to affirm that the optimized solution is more optimal than bruteforce
+as well as on the time than the space used in memory.
