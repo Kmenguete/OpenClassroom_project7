@@ -43,3 +43,7 @@ However, our optimized solution is perfectly suitable for very large dataset. Be
 we had to clean and analyze our dataset. This is why, we created a python file for this. Unfortunately, the possible
 cleaning operations that may be required for our datasets are not comprehensive and may need to be completed by future
 developers or data scientists that will resume this project.
+
+As stated on the first paragraph of the third part of this README file, the bruteforce algorithm is not suitable for 
+very large datasets. This is why, we had to think about a way to get the best combination without exploring all of them.
+Instead of trying to test x billions of combinations, I decided to adopt another approach. 
