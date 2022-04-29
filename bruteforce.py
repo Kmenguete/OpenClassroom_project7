@@ -62,7 +62,7 @@ def get_space_complexity_of_algorithm():
 
 
 def get_number_of_combinations():
-    # Creating a matplotlib graph the number of combinations according the number of shares in a list.
+    # Creating a matplotlib graph that illustrates the number of combinations according the number of shares in a list.
     x_shares = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
     y_combinations = np.array([2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072,
                                262144, 524288, 1048576])
