@@ -14,7 +14,7 @@ shares_dataframe2 = pd.read_csv('dataset2.csv')
 # be maid on future datasets in order to clean and analyze them.
 
 
-def remove_outliers(shares):
+def remove_outliers(shares, output_file):
     clean_dataframe = pd.DataFrame(columns=['name', 'price', 'profit'])
     for i in range(0, len(shares)):
         price_of_share = shares.at[i, 'price']
@@ -23,7 +23,7 @@ def remove_outliers(shares):
                                                       'profit': shares.at[i, 'profit']}, ignore_index=True)
         else:
             print("The price of this share does not make sense: " + str(price_of_share))
-    clean_dataframe.to_csv('dataset2.csv', index=False)
+    clean_dataframe.to_csv(output_file, index=False)
     print(clean_dataframe.to_string())
     return clean_dataframe
 
