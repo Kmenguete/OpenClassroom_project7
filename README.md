@@ -110,3 +110,17 @@ complexity by the space an algorithm and its input data takes in memory(in bytes
 time-consuming takes very few places in memory. On the reverse, an algorithm that does not take a lot of place in 
 memory is time-consuming. Consequently, when we write an algorithm, we have to find a delicate compromise between
 the time it takes to run and the space it takes in memory.
+
+After analyzing and comparing bruteforce algorithm and optimized solution algorithm, we found that bruteforce algorithm
+has an exponential time complexity O(2^n). That mean that the running time double for each addition of data in the input
+data because the number of combinations double for each addition of data in the input data. On the other end, the 
+optimized solution algorithm has a logarithmic time complexity, that mean that the runtime increase as the size of input 
+data increase, but it increases very slowly. We can then say that the optimized solution has a better time complexity 
+of the bruteforce because the running time is much faster than the bruteforce.
+
+Unfortunately, the combinations if bruteforce takes a lot of spaces in memory. Because the number of combinations double
+for each addition of data in the input data, we can say that the space complexity of bruteforce algorithm is also
+exponential(as the time complexity).
+
+The optimized solution has a linear space complexity. That mean that the space used by the algorithm in memory increases
+gradually as the number of input data increases. But it does not increase as fast as the bruteforce algorithm.
