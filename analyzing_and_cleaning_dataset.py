@@ -8,6 +8,8 @@ import plotly.express as px
 color = sns.color_palette()
 shares_dataframe1 = pd.read_csv('dataset1_Python+P7.csv')
 shares_dataframe2 = pd.read_csv('dataset2.csv')
+former_shares_dataframe1 = pd.read_csv('former_dataset1_Python+P7.csv')
+former_shares_dataframe2 = pd.read_csv('dataset2_Python+P7.csv')
 
 # The total number of algorithms required to clean dataset is not comprehensive. As new datasets will be used for
 # optimized solution and bruteforce algorithm, I may add new functions according future operations that may need to
