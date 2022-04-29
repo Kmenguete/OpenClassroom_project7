@@ -67,7 +67,7 @@ according the number of inputs data. And the space complexity refer to the space
 the number of inputs data. In order to simplify the big O notation explanation, I will make a focus on time complexity
 before to summarize a little explanation of its space counterparts.
 
-Globally, in the big O notation, there is 7 level of complexity. I will first go to the best case level of complexity
+Globally, in the big O notation, there is 6 level of complexity. I will first go to the best case level of complexity
 to the worst one:
 ***
 #### 1. The constant time complexity O(1)
@@ -88,4 +88,14 @@ the input data. This is the best possible time complexity when the algorithm mus
 However, it is considered as a bad level in the big O notation because the running time of the program increases 
 gradually as the size of the input data increases.
 ***
-#### 4.
+#### 4. The quadratic time complexity O(n^2)
+***
+An algorithm is said to have a quadratic time complexity when it needs to perform a linear time operation for each 
+value in the input data. In the big O notation, it is one of the worst level of complexity.
+***
+#### 5. The exponential time complexity O(2^n)
+***
+An algorithm is said to have an exponential time complexity when the growth doubles with each addition to the input 
+data set. This kind of time complexity is usually seen in brute-force algorithms. The level of time complexity is 
+worse than the quadratic complexity(who is already one of the worst).
+***
