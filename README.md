@@ -36,7 +36,7 @@ generated two years later will be 99.08 euros worth.
 The optimized solution algorithm is very interesting. Because, during the implementation of this solution, we discovered
 that we don't need to explore all possible combinations, in order to get the most profitable shares list. We succeeded
 to get the best combination with less time and fewer spaces in memory. This is what makes our solution optimal(less 
-time and fewer spaces in memory for the same results). Anyway, our bruteforce algorithm was not suitable at all for 
+time and fewer spaces in memory for the same result). Anyway, our bruteforce algorithm was not suitable at all for 
 very large dataset.
 
 However, our optimized solution is perfectly suitable for very large dataset. Before to implement our optimized solution,
@@ -56,3 +56,6 @@ shares that return the highest profit from a given dataset. In a second time, I 
 finally, I create an algorithm that purchase shares from this sorted list until we reached the maximum amount of 
 authorized investment(500 euros). This is how I got the most profitable shares list without exploring billions of 
 combinations.
+***
+### 4. The analysis of both algorithm and their comparison
+***
