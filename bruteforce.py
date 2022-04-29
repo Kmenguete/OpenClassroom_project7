@@ -43,25 +43,9 @@ def main():
     # Calculating the runtime of the program by subtracting the time(time.time()) at the start of the program with
     # the time(time.time()) at the end of it.
     print(f"The runtime of the program is {end - start} seconds")
-    # Creating a matplotlib graph that illustrate exponential time complexity of the algorithm.
-    x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
-    y = np.array([1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144,
-                  524288])
-    plt.plot(x, y)
-    plt.xlabel('Inputs data')
-    plt.ylabel('Time units')
-    plt.title('Exponential Time O(2^n) complexity of the brute force algorithm in the big O notation')
-    plt.show()
 
-    # Creating a matplotlib graph the number of combinations according the number of shares in a list.
-
-    y_combinations = np.array([2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072,
-                              262144, 524288, 1048576])
-    plt.plot(x, y_combinations)
-    plt.xlabel('Shares')
-    plt.ylabel('Number of combinations')
-    plt.title('Number of combinations according the number of shares.')
-    plt.show()
+    get_time_complexity_of_algorithm()
+    get_number_of_combinations()
     get_space_complexity_of_algorithm()
 
 
@@ -74,6 +58,30 @@ def get_space_complexity_of_algorithm():
     plt.xlabel('Inputs data')
     plt.ylabel('Bytes')
     plt.title('Exponential space O(2^n) complexity of the brute force algorithm in the big O notation')
+    plt.show()
+
+
+def get_number_of_combinations():
+    # Creating a matplotlib graph the number of combinations according the number of shares in a list.
+    x_shares = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
+    y_combinations = np.array([2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072,
+                               262144, 524288, 1048576])
+    plt.plot(x_shares, y_combinations)
+    plt.xlabel('Shares')
+    plt.ylabel('Number of combinations')
+    plt.title('Number of combinations according the number of shares.')
+    plt.show()
+
+
+def get_time_complexity_of_algorithm():
+    # Creating a matplotlib graph that illustrate exponential time complexity of the algorithm.
+    x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
+    y = np.array([1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144,
+                  524288])
+    plt.plot(x, y)
+    plt.xlabel('Inputs data')
+    plt.ylabel('Time units')
+    plt.title('Exponential Time O(2^n) complexity of the brute force algorithm in the big O notation')
     plt.show()
 
 
