@@ -46,4 +46,13 @@ developers or data scientists that will resume this project.
 
 As stated on the first paragraph of the third part of this README file, the bruteforce algorithm is not suitable for 
 very large datasets. This is why, we had to think about a way to get the best combination without exploring all of them.
-Instead of trying to test x billions of combinations, I decided to adopt another approach. 
+Instead of trying to test x billions of combinations, I decided to adopt another approach. Then, I asked my self the 
+following question:
+
+-among thousands of shares, which of them return the highest profit? For a 500 euros maximum investment?
+
+Instead of exploring billions of combinations, I decided to adopt a funnel logic instead. First, I select the 10% of 
+shares that return the highest profit from a given dataset. In a second time, I sort this list in descending order. And
+finally, I create an algorithm that purchase shares from this sorted list until we reached the maximum amount of 
+authorized investment(500 euros). This is how I got the most profitable shares list without exploring billions of 
+combinations.
