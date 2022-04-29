@@ -47,6 +47,8 @@ def get_total_real_profit_of_shares(shares):
 
 
 def get_real_profit(shares, csv_shares_real_profit):
+    # I compute the real profit of each share(The percentage of the cost of the share).
+    # I store the results in a list, and I will use this list to add real profit data to csv file.
     real_profit_list = []
     for i in range(len(shares)):
         real_profit = shares.loc[i, 'price'] * (shares.loc[i, 'profit'] / 100)
@@ -55,6 +57,9 @@ def get_real_profit(shares, csv_shares_real_profit):
 
 
 def add_column_in_csv(input_file, output_file, real_profit_list):
+    # I retrieve the real profit list(from get_real_profit function) and I add real profit data to a new column.
+    # I save this new column in a new csv file(the output file). The output file is the input file with real profit
+    # data.
     csv_input = input_file
     csv_input['real profit'] = real_profit_list
     csv_input.to_csv(output_file, index=False)
