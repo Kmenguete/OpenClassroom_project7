@@ -77,3 +77,15 @@ No matter, the size of the input data, the running time will be always the same.
 ***
 #### 2. The logarithmic time complexity O(log n)
 ***
+An algorithm is said to have a logarithmic time complexity when it reduces the size of the input data in each step 
+(it doesn't need to look at all values of the input data). This is also an excellent level of time complexity(similar
+level to the constant time complexity).
+***
+#### 3. The linear time complexity O(n)
+***
+An algorithm is said to have a linear time complexity when the running time increases at most linearly with the size of 
+the input data. This is the best possible time complexity when the algorithm must examine all values in the input data.
+However, it is considered as a bad level in the big O notation because the running time of the program increases 
+gradually as the size of the input data increases.
+***
+#### 4.
