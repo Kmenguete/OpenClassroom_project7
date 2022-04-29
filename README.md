@@ -59,3 +59,9 @@ combinations.
 ***
 ### 4. The analysis of both algorithm and their comparison
 ***
+One of the major requirements of this project was to perform a comparison of the brute force algorithm with the optimized
+solution. We had to analyze the runtime and the memory used by both of them. For this, we were asked to refer to the big
+O notation. The big O notation is a system that let to evaluate the complexity of an algorithm. There is two kind of 
+complexity. The time complexity and the space complexity. The time complexity refer to the time a program takes to run
+according the number of inputs data. And the space complexity refer to the space a program takes in memory according 
+the number of inputs data.
