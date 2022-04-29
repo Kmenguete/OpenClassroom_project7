@@ -2,7 +2,7 @@
 1. About the project
 2. The bruteforce algorithm
 3. the optimized solution algorithm
-4. The analysis of both algorithm and their comparison
+4. The analysis of both algorithms and their comparison
 5. Discussion for further development
 ### 1. About the project
 ***
@@ -130,3 +130,10 @@ in memory.
 To conclude, the optimized solution is faster and consumes less memory than the bruteforce(even for a much larger 
 dataset than that of bruteforce). This allows us to affirm that the optimized solution is more optimal than bruteforce
 as well as on the time than the space used in memory.
+***
+### 5. Discussion for further development
+***
+In the future, we will need to improve the analyzing and cleaning process of datasets before using algorithm. 
+Because each dataset is unique, it is difficult to write a program that anticipate every possible flaws for each one.
+Beside of this, we didn't have the time to think carefully about an algorithm that properly clean and analyze dataset
+(that wasn't our mission for this project).
