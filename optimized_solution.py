@@ -66,12 +66,12 @@ def add_column_in_csv(input_file, output_file, real_profit_list):
 
 
 """
-I envision to build a recommender system for the optimized solution. I will build an algorithm that will recommend
+I built a recommender system for the optimized solution. I built an algorithm that recommend
 the most profitable shares list for a total maximum cost of shares of 500 euros.
 """
 
 """
-I will build a simple recommender system. My program will recommend a list of most profitable shares for a maximum
+I built a simple recommender system. My program recommend a list of most profitable shares for a maximum
 total cost of 500 euros.
 """
 
