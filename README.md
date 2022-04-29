@@ -30,3 +30,16 @@ First, we try every possible combinations. Once we tried it, we sort them accord
 is a shares list). We selected, only combinations from which, the total price does not exceed 500 euros. Once, we 
 selected it, we have found that the best combination was the first one of the list(of combinations) and the profit 
 generated two years later will be 99.08 euros worth.
+***
+### 3. The optimized solution algorithm
+***
+The optimized solution algorithm is very interesting. Because, during the implementation of this solution, we discovered
+that we don't need to explore all possible combinations, in order to get the most profitable shares list. We succeeded
+to get the best combination with less time and fewer spaces in memory. This is what makes our solution optimal(less 
+time and fewer spaces in memory for the same results). Anyway, our bruteforce algorithm was not suitable at all for 
+very large dataset.
+
+However, our optimized solution is perfectly suitable for very large dataset. Before to implement our optimized solution,
+we had to clean and analyze our dataset. This is why, we created a python file for this. Unfortunately, the possible
+cleaning operations that may be required for our datasets are not comprehensive and may need to be completed by future
+developers or data scientists that will resume this project.
