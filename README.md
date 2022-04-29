@@ -64,4 +64,16 @@ solution. We had to analyze the runtime and the memory used by both of them. For
 O notation. The big O notation is a system that let to evaluate the complexity of an algorithm. There is two kind of 
 complexity. The time complexity and the space complexity. The time complexity refer to the time a program takes to run
 according the number of inputs data. And the space complexity refer to the space a program takes in memory according 
-the number of inputs data.
+the number of inputs data. In order to simplify the big O notation explanation, I will make a focus on time complexity
+before to summarize a little explanation of its space counterparts.
+
+Globally, in the big O notation, there is 7 level of complexity. I will first go to the best case level of complexity
+to the worst one:
+***
+#### 1. The constant time complexity O(1)
+***
+An algorithm is said to have a constant time complexity when the running time is not dependent of the size of the input data.
+No matter, the size of the input data, the running time will be always the same. This is the best level of time complexity.
+***
+#### 2. The logarithmic time complexity O(log n)
+***
