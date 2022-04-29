@@ -104,3 +104,9 @@ worse than the quadratic complexity(who is already one of the worst).
 An algorithm is said to have a factorial time complexity when it grows in a factorial way based on the size of the 
 input data. The complexity of this kind of algorithm grow very fast, even for a small size input of data. In the big 
 O notation, it is the worst level of complexity.
+***
+The space complexity has the same big O notation as the time complexity. In the space complexity, we evaluate, the 
+complexity by the space an algorithm and its input data takes in memory(in bytes). Generally, an algorithm that is
+time-consuming takes very few places in memory. On the reverse, an algorithm that does not take a lot of place in 
+memory is time-consuming. Consequently, when we write an algorithm, we have to find a delicate compromise between
+the time it takes to run and the space it takes in memory.
