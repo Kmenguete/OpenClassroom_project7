@@ -99,3 +99,8 @@ An algorithm is said to have an exponential time complexity when the growth doub
 data set. This kind of time complexity is usually seen in brute-force algorithms. The level of time complexity is 
 worse than the quadratic complexity(who is already one of the worst).
 ***
+#### 6. The factorial time complexity O(n!)
+***
+An algorithm is said to have a factorial time complexity when it grows in a factorial way based on the size of the 
+input data. The complexity of this kind of algorithm grow very fast, even for a small size input of data. In the big 
+O notation, it is the worst level of complexity.
