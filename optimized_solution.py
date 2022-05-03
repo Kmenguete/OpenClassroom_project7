@@ -161,3 +161,5 @@ def get_time_complexity_of_algorithm():
 
 
 get_most_profitable_shares(shares_dataframe1_real_profit)
+
+# I asked git to ignore files that are not required in GitHub.
